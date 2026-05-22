@@ -21,4 +21,4 @@ A real-time monitoring and alert system designed to help detect potential landsl
 
 ## Project Info
 
-Developed as a project under IIT Roorkee.
+Project work under IIT Roorkee.
