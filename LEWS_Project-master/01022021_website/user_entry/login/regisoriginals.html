@@ -1,0 +1,160 @@
+
+<html>
+<head>
+ <script type="text/javascript">
+  function login_check()
+  {
+    a=document.getElementById('n1').value
+    b=document.getElementById('n2').value
+    if( a == '' || b== '')
+    {
+      alert('Please Fill the values')
+      return false
+    }
+    return true
+  }
+  function f1()
+  {
+    var a=document.getElementById('registration')
+    text=""
+    for(var i=0;i<7;i++)
+    {
+      if(a.elements[i].value == '')
+      {
+        alert('ANY VALUE IS MISSING')
+        return false
+      }
+    }
+    if(a.elements[1].value != a.elements[2].value)
+    {
+      alert("PASSWORD AND REPASSWORD DONT MATCH")
+      return false
+    }
+  return true
+  }
+ </script>
+<style type="text/css">
+#foo
+{
+  margin-top:11%;
+  margin-left:28%;
+  font-size:25px
+}
+hr
+{
+  margin-top:20px;
+}
+#cen
+{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left:30%;
+  margin-right:20%;
+  background-color:#CCCCCC;
+  border-style: groove;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 10px 10px 10px 10px;
+}
+
+#left_panel
+{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right:50px;
+  position:relative;
+  height:0px;
+  width:200px;
+  margin-top:20px;
+}
+a
+{
+ text-decoration:None;
+ color:Black;
+}
+a:hover
+{
+ background-color: #AAAA00;
+}
+
+#image
+{
+
+  margin-top:5%;
+  margin-left:25%;
+}
+#upper_inner_left
+{
+  height:0px;
+
+}
+#login,#div_register
+{
+  border-style: groove;
+  border-color:#0000AA;
+  width:20%;
+  padding:5px 5px 5px 5px;
+}
+#A1
+{
+   margin-left:45%
+}
+</style>
+</head>
+<title>NMHS</title>
+<body bgcolor=#E8EFEF>
+<div id=upper_outer>
+ <div id=upper_inner_left>
+        <h1><center><font size=10>Landslide Early Warning System</font></center></h1>
+         <div id=div_login>
+	  <form method=post action="login_page" id="login">
+	  <table>
+	    <tr><td>NAME</td><td><input type="text" name="t11" id='n1'></td></tr>
+	    <tr><td>PASSWORD</td><td><input type="password" name="t12" id='n2'></td></tr>
+	    <tr><td><input type="hidden" value="web" name="web"><input type="submit" onclick='login_check()'></td><td></td></tr>
+
+	  </table>
+	</form>
+         </div>
+	</br></br>
+  <div id="div_register">
+  <form method=post action="regis_page" id="registration">
+  <table>
+  <tr><td>NAME</td><td><input type="text" name="t1" id='id1'></td></tr>
+  <tr><td>PASSWORD</td><td><input type="password" name="t2" id='id2' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td></tr>
+  <tr><td>REPASSWORD</td><td><input type="password" name="t3" id='id3' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td></tr>
+  <tr><td>PHONE NUMBER</td><td><input type="text" name="t4" id='id4' pattern="[1-9]{1}[0-9]{9}"/></td></tr>
+  <tr><td>EMAIL ID</td><td><input type="text" name="t5" id='id5' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td></tr>
+  <tr>
+  <td>USER TYPE</td>
+  <td>
+  <select name=t6 id='id6'>
+  <option value="STUDENT">STUDENT</option>
+  <option value="SUPERVISOR">SUPERVISOR</option>
+  </select>
+  </td></tr>
+  <tr><td><input type="submit" onclick='return f1() ' value="REGISTERED"></td><td></td></tr>
+  </table><input type="hidden" value="web" name="web">
+  </form>
+  </div>
+</div>
+  <div id="image">
+    <img src="/static/A1.jpeg" width=80% height=45% />
+  </div>
+</div>
+<hr>
+<H3><p style="color:red">{{message}}</p></H3>
+<div id="par">
+<div id="left_panel">
+  <a href="{% url 'download' %}">Request Dataset</a> </br>
+  <a href=contact.html> Our Mission</a> </br>
+  <a href=contact.html>Contact us</a> </br>
+  <a href='static/App.apk'>DOWNLOAD APP</a> </br>
+  <a href='static/IIT_inside.apk'>INSIDE IIT DOWNLOAD APP</a> </br>
+  <a href=about.html>About us</a>
+</div>
+<div id="cen">
+ This website has been designed for monitoring sensor data of NMHS.
+  </div>
+  <p id='foo'>Joint Collaborative Development of CSIR-CBRI and IIT,Roorkee <div id='A1'><font size=5>Funded by NMHS</font><div><p>
+  </div>
+</body>
+</html>

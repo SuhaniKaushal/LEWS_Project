@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Schema - Sensor Monitoring System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .db-info {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .db-info strong {
+            color: #667eea;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #333;
+            border-radius: 3px;
+        }
+
+        .legend-box.app { background: #e3f2fd; }
+        .legend-box.auth { background: #fff3e0; }
+        .legend-box.system { background: #f3e5f5; }
+
+        .schema-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .table-card {
+            background: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .table-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .table-card.highlighted {
+            box-shadow: 0 0 0 3px #667eea;
+            transform: scale(1.02);
+        }
+
+        .table-card.app {
+            border-color: #2196F3;
+            background: #e3f2fd;
+        }
+
+        .table-card.auth {
+            border-color: #FF9800;
+            background: #fff3e0;
+        }
+
+        .table-card.system {
+            border-color: #9C27B0;
+            background: #f3e5f5;
+        }
+
+        .table-header {
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: white;
+            text-align: center;
+        }
+
+        .table-card.app .table-header { background: #2196F3; }
+        .table-card.auth .table-header { background: #FF9800; }
+        .table-card.system .table-header { background: #9C27B0; }
+
+        .table-body {
+            padding: 15px;
+        }
+
+        .field {
+            padding: 8px 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            border-left: 3px solid transparent;
+        }
+
+        .field.pk {
+            border-left-color: #f44336;
+            font-weight: bold;
+        }
+
+        .field.fk {
+            border-left-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        .field.fk:hover {
+            background: #e8f5e9;
+        }
+
+        .field-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .field-type {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .field-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+
+        .badge-pk {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .badge-fk {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-unique {
+            background: #fff9c4;
+            color: #f57f17;
+        }
+
+        .relationships {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .relationships h2 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .relationship-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+        }
+
+        .relationship {
+            padding: 12px 15px;
+            background: white;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+        }
+
+        .relationship.one-to-many {
+            border-left-color: #4CAF50;
+        }
+
+        .relationship.one-to-one {
+            border-left-color: #FF9800;
+        }
+
+        .rel-arrow {
+            color: #667eea;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .schema-container {
+                grid-template-columns: 1fr;
+            }
+
+            .relationship-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Database Schema Visualization</h1>
+
+        <div class="db-info">
+            <p><strong>Database:</strong> PostgreSQL | <strong>Host:</strong> 127.0.0.1 (localhost) | <strong>Port:</strong> 5432 | <strong>Name:</strong> postgres</p>
+            <p style="margin-top: 5px; font-size: 0.9em;">Click on tables to highlight relationships | Hover over foreign keys to see connections</p>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box app"></div>
+                <span>Application Tables (6)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box auth"></div>
+                <span>Django Auth Tables (6)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box system"></div>
+                <span>Django System Tables (4)</span>
+            </div>
+        </div>
+
+        <div class="schema-container" id="schemaContainer"></div>
+
+        <div class="relationships">
+            <h2>🔗 Database Relationships</h2>
+            <div class="relationship-list" id="relationshipsList"></div>
+        </div>
+    </div>
+
+    <script>
+        const tables = {
+            // Application Tables
+            node: {
+                type: 'app',
+                fields: [
+                    { name: 'node_id', type: 'CharField(100)', pk: true },
+                    { name: 'name', type: 'CharField(100)', nullable: true },
+                    { name: 'location', type: 'CharField(100)', nullable: true },
+                    { name: 'remark', type: 'CharField(500)', nullable: true }
+                ]
+            },
+            sensor_info: {
+                type: 'app',
+                fields: [
+                    { name: 'sensor_id', type: 'CharField(100)', pk: true },
+                    { name: 'sensor_type', type: 'CharField(100)', nullable: true },
+                    { name: 'node_id', type: 'ForeignKey → node', fk: true, target: 'node' },
+                    { name: 'depth', type: 'DecimalField', nullable: true },
+                    { name: 'remark', type: 'CharField(500)', nullable: true }
+                ]
+            },
+            sensor_data: {
+                type: 'app',
+                fields: [
+                    { name: 'sensor_id', type: 'OneToOneField → sensor_info', pk: true, fk: true, target: 'sensor_info' },
+                    { name: 'receive_time', type: 'DateTimeField', pk: true },
+                    { name: 'sensor_value', type: 'DecimalField', nullable: true }
+                ],
+                unique: '(sensor_id, receive_time)'
+            },
+            sensor_thresold: {
+                type: 'app',
+                fields: [
+                    { name: 'sensor_id', type: 'OneToOneField → sensor_info', pk: true, fk: true, target: 'sensor_info' },
+                    { name: 'min_value', type: 'DecimalField', nullable: true },
+                    { name: 'max_value', type: 'DecimalField', nullable: true },
+                    { name: 'last_email', type: 'DateTimeField', nullable: true }
+                ]
+            },
+            sensor_list: {
+                type: 'app',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'sensor_name', type: 'CharField(200)', nullable: true }
+                ]
+            },
+            user_list: {
+                type: 'app',
+                fields: [
+                    { name: 'email_id', type: 'CharField(100)', pk: true },
+                    { name: 'uname', type: 'CharField(100)', nullable: true },
+                    { name: 'upassword', type: 'CharField(100)', nullable: true },
+                    { name: 'ph_no', type: 'CharField(100)', nullable: true },
+                    { name: 'user_type', type: 'CharField(100)', nullable: true },
+                    { name: 'status', type: 'CharField(100)', nullable: true },
+                    { name: 'verify', type: 'CharField(100)', nullable: true }
+                ]
+            },
+
+            // Django Auth Tables
+            auth_user: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'username', type: 'CharField(150)', unique: true },
+                    { name: 'password', type: 'CharField(128)' },
+                    { name: 'email', type: 'CharField(254)' },
+                    { name: 'first_name', type: 'CharField(150)' },
+                    { name: 'last_name', type: 'CharField(150)' },
+                    { name: 'is_superuser', type: 'BooleanField' },
+                    { name: 'is_staff', type: 'BooleanField' },
+                    { name: 'is_active', type: 'BooleanField' },
+                    { name: 'date_joined', type: 'DateTimeField' },
+                    { name: 'last_login', type: 'DateTimeField', nullable: true }
+                ]
+            },
+            auth_group: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'name', type: 'CharField(150)', unique: true }
+                ]
+            },
+            auth_permission: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'name', type: 'CharField(255)' },
+                    { name: 'content_type_id', type: 'ForeignKey → django_content_type', fk: true, target: 'django_content_type' },
+                    { name: 'codename', type: 'CharField(100)' }
+                ],
+                unique: '(content_type_id, codename)'
+            },
+            auth_group_permissions: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'group_id', type: 'ForeignKey → auth_group', fk: true, target: 'auth_group' },
+                    { name: 'permission_id', type: 'ForeignKey → auth_permission', fk: true, target: 'auth_permission' }
+                ],
+                unique: '(group_id, permission_id)'
+            },
+            auth_user_groups: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'user_id', type: 'ForeignKey → auth_user', fk: true, target: 'auth_user' },
+                    { name: 'group_id', type: 'ForeignKey → auth_group', fk: true, target: 'auth_group' }
+                ],
+                unique: '(user_id, group_id)'
+            },
+            auth_user_user_permissions: {
+                type: 'auth',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'user_id', type: 'ForeignKey → auth_user', fk: true, target: 'auth_user' },
+                    { name: 'permission_id', type: 'ForeignKey → auth_permission', fk: true, target: 'auth_permission' }
+                ],
+                unique: '(user_id, permission_id)'
+            },
+
+            // Django System Tables
+            django_content_type: {
+                type: 'system',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'app_label', type: 'CharField(100)' },
+                    { name: 'model', type: 'CharField(100)' }
+                ],
+                unique: '(app_label, model)'
+            },
+            django_admin_log: {
+                type: 'system',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'action_time', type: 'DateTimeField' },
+                    { name: 'user_id', type: 'ForeignKey → auth_user', fk: true, target: 'auth_user' },
+                    { name: 'content_type_id', type: 'ForeignKey → django_content_type', fk: true, target: 'django_content_type' },
+                    { name: 'object_id', type: 'TextField', nullable: true },
+                    { name: 'object_repr', type: 'CharField(200)' },
+                    { name: 'action_flag', type: 'SmallIntegerField' },
+                    { name: 'change_message', type: 'TextField' }
+                ]
+            },
+            django_migrations: {
+                type: 'system',
+                fields: [
+                    { name: 'id', type: 'AutoField', pk: true },
+                    { name: 'app', type: 'CharField(255)' },
+                    { name: 'name', type: 'CharField(255)' },
+                    { name: 'applied', type: 'DateTimeField' }
+                ]
+            },
+            django_session: {
+                type: 'system',
+                fields: [
+                    { name: 'session_key', type: 'CharField(40)', pk: true },
+                    { name: 'session_data', type: 'TextField' },
+                    { name: 'expire_date', type: 'DateTimeField' }
+                ]
+            }
+        };
+
+        const relationships = [
+            { from: 'sensor_info', to: 'node', type: 'many-to-one', field: 'node_id' },
+            { from: 'sensor_data', to: 'sensor_info', type: 'one-to-one', field: 'sensor_id' },
+            { from: 'sensor_thresold', to: 'sensor_info', type: 'one-to-one', field: 'sensor_id' },
+            { from: 'auth_permission', to: 'django_content_type', type: 'many-to-one', field: 'content_type_id' },
+            { from: 'auth_group_permissions', to: 'auth_group', type: 'many-to-one', field: 'group_id' },
+            { from: 'auth_group_permissions', to: 'auth_permission', type: 'many-to-one', field: 'permission_id' },
+            { from: 'auth_user_groups', to: 'auth_user', type: 'many-to-one', field: 'user_id' },
+            { from: 'auth_user_groups', to: 'auth_group', type: 'many-to-one', field: 'group_id' },
+            { from: 'auth_user_user_permissions', to: 'auth_user', type: 'many-to-one', field: 'user_id' },
+            { from: 'auth_user_user_permissions', to: 'auth_permission', type: 'many-to-one', field: 'permission_id' },
+            { from: 'django_admin_log', to: 'auth_user', type: 'many-to-one', field: 'user_id' },
+            { from: 'django_admin_log', to: 'django_content_type', type: 'many-to-one', field: 'content_type_id' }
+        ];
+
+        function renderTables() {
+            const container = document.getElementById('schemaContainer');
+
+            Object.keys(tables).forEach(tableName => {
+                const table = tables[tableName];
+                const card = document.createElement('div');
+                card.className = `table-card ${table.type}`;
+                card.dataset.table = tableName;
+
+                const header = document.createElement('div');
+                header.className = 'table-header';
+                header.textContent = tableName;
+
+                const body = document.createElement('div');
+                body.className = 'table-body';
+
+                table.fields.forEach(field => {
+                    const fieldDiv = document.createElement('div');
+                    fieldDiv.className = 'field';
+                    if (field.pk) fieldDiv.classList.add('pk');
+                    if (field.fk) fieldDiv.classList.add('fk');
+
+                    let badges = '';
+                    if (field.pk) badges += '<span class="field-badge badge-pk">PK</span>';
+                    if (field.fk) badges += '<span class="field-badge badge-fk">FK</span>';
+                    if (field.unique) badges += '<span class="field-badge badge-unique">UNIQUE</span>';
+
+                    fieldDiv.innerHTML = `
+                        <span class="field-name">${field.name}</span>
+                        ${badges}
+                        <div class="field-type">${field.type}${field.nullable ? ' (nullable)' : ''}</div>
+                    `;
+
+                    if (field.fk && field.target) {
+                        fieldDiv.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            highlightRelationship(tableName, field.target);
+                        });
+                    }
+
+                    body.appendChild(fieldDiv);
+                });
+
+                if (table.unique) {
+                    const uniqueDiv = document.createElement('div');
+                    uniqueDiv.className = 'field';
+                    uniqueDiv.innerHTML = `
+                        <span class="field-badge badge-unique">UNIQUE TOGETHER</span>
+                        <div class="field-type">${table.unique}</div>
+                    `;
+                    body.appendChild(uniqueDiv);
+                }
+
+                card.appendChild(header);
+                card.appendChild(body);
+                container.appendChild(card);
+
+                card.addEventListener('click', () => {
+                    highlightTable(tableName);
+                });
+            });
+        }
+
+        function renderRelationships() {
+            const container = document.getElementById('relationshipsList');
+
+            relationships.forEach(rel => {
+                const relDiv = document.createElement('div');
+                relDiv.className = `relationship ${rel.type === 'one-to-one' ? 'one-to-one' : 'one-to-many'}`;
+
+                const arrow = rel.type === 'one-to-one' ? '⟷' : '→';
+                const relType = rel.type === 'one-to-one' ? '1:1' : 'N:1';
+
+                relDiv.innerHTML = `
+                    <strong>${rel.from}</strong>
+                    <span class="rel-arrow">${arrow}</span>
+                    <strong>${rel.to}</strong>
+                    <span style="color: #999; margin-left: 10px;">(${relType} via ${rel.field})</span>
+                `;
+
+                relDiv.addEventListener('click', () => {
+                    highlightRelationship(rel.from, rel.to);
+                });
+
+                container.appendChild(relDiv);
+            });
+        }
+
+        function highlightTable(tableName) {
+            document.querySelectorAll('.table-card').forEach(card => {
+                card.classList.remove('highlighted');
+            });
+
+            const card = document.querySelector(`[data-table="${tableName}"]`);
+            if (card) {
+                card.classList.add('highlighted');
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function highlightRelationship(from, to) {
+            document.querySelectorAll('.table-card').forEach(card => {
+                card.classList.remove('highlighted');
+            });
+
+            const fromCard = document.querySelector(`[data-table="${from}"]`);
+            const toCard = document.querySelector(`[data-table="${to}"]`);
+
+            if (fromCard) fromCard.classList.add('highlighted');
+            if (toCard) toCard.classList.add('highlighted');
+
+            if (fromCard) {
+                fromCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Initialize
+        renderTables();
+        renderRelationships();
+    </script>
+</body>
+</html>

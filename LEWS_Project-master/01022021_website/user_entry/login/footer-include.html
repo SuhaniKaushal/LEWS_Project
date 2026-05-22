@@ -1,0 +1,275 @@
+{% load static %}
+<!-- Main Footer -->
+<footer class="main-footer">
+    <div class="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+        </svg>
+    </div>
+
+    <div class="footer-content-wrapper">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- Column 1: About -->
+                    <div class="footer-column footer-about">
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <div class="footer-brand-text">
+                                <h3>LEWS</h3>
+                                <span>Landslide Early Warning System</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            An advanced monitoring system integrating cutting-edge sensor technology
+                            with real-time data analytics to predict and prevent landslide disasters,
+                            protecting communities and infrastructure.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="{% if user_name %}{% url 'home' %}{% else %}{% url 'landing' %}{% endif %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'mission' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Our Mission</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>About Us</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Privacy Policy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Terms of Service</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Contact Us</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resources -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Resources</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="{% url 'download' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Request Dataset</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Documentation</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>API Access</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Download Reports</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'coming_soon' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Contact Support</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact Info -->
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Contact Information</h4>
+                        <div class="contact-info-list">
+                            <!-- CSIR-CBRI -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>CSIR-CBRI</strong>
+                                    <p>Roorkee - 247667<br>Uttarakhand, India</p>
+                                </div>
+                            </div>
+
+                            <!-- IIT-Roorkee -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>IIT-Roorkee</strong>
+                                    <p>Roorkee - 247667<br>Uttarakhand, India</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <a href="mailto:info@lews.org">info@lews.org</a>
+                                    <a href="mailto:support@lews.org">support@lews.org</a>
+                                </div>
+                            </div>
+
+                            <!-- Emergency Helpline -->
+                            <div class="contact-item emergency">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <strong>Emergency Helpline</strong>
+                                    <a href="tel:+911800123456" class="emergency-number">
+                                        1800-123-456 (Toll Free)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funding & Partners Banner -->
+            <div class="footer-partners">
+                <div class="partners-content">
+                    <div class="partners-label">
+                        <i class="fas fa-handshake"></i>
+                        <span>Developed & Supported By</span>
+                    </div>
+                    <div class="partners-logos">
+                        <div class="partner-badge">
+                            <i class="fas fa-flask"></i>
+                            <span>CSIR-CBRI</span>
+                        </div>
+                        <div class="partner-divider">×</div>
+                        <div class="partner-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IIT-Roorkee</span>
+                        </div>
+                    </div>
+                    <div class="funding-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Funded by NMHS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>&copy; 2025 Landslide Early Warning System. All rights reserved.</span>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy</a>
+                        <span class="separator">•</span>
+                        <a href="terms.html">Terms</a>
+                        <span class="separator">•</span>
+                        <a href="sitemap.html">Sitemap</a>
+                        <span class="separator">•</span>
+                        <a href="accessibility.html">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</footer>
+
+<!-- Footer JavaScript -->
+<script>
+    (function() {
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+
+        if (backToTopBtn) {
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Scroll to top on click
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Current year update
+        const currentYear = new Date().getFullYear();
+        const yearElements = document.querySelectorAll('.footer-copyright span');
+        yearElements.forEach(el => {
+            el.textContent = el.textContent.replace('2025', currentYear);
+        });
+    })();
+</script>

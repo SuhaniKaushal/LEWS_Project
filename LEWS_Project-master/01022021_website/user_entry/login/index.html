@@ -1,0 +1,604 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>LEWS - Landslide Early Warning System | Real-time Monitoring & Alerts</title>
+    <meta name="description" content="Landslide Early Warning System - Real-time monitoring and alert system for NMHS sensor data. Joint collaborative development by CSIR-CBRI and IIT-Roorkee.">
+    <meta name="keywords" content="landslide, early warning, monitoring, NMHS, CSIR-CBRI, IIT-Roorkee, sensor data, alerts">
+    <meta name="author" content="CSIR-CBRI & IIT-Roorkee">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LEWS - Landslide Early Warning System">
+    <meta property="og:description" content="Real-time monitoring and alert system for landslide detection">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static 'css/landing-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-lews fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand navbar-brand-lews" href="#">
+                <div class="brand-logo">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">LEWS</span>
+                    <span class="brand-tagline">Early Warning System</span>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler navbar-toggler-lews" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn-nav-login" href="{% url 'signin' %}">
+                            <i class="fas fa-sign-in-alt me-1"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <!-- Background Elements -->
+            <div class="hero-bg-pattern"></div>
+            <div class="hero-topo-pattern"></div>
+            <div class="hero-floating-elements">
+                <div class="floating-shape floating-shape-1"></div>
+                <div class="floating-shape floating-shape-2"></div>
+                <div class="floating-shape floating-shape-3"></div>
+            </div>
+
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <!-- Hero Content -->
+                    <div class="col-lg-6 hero-content">
+                        <!-- Status Badge -->
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            <span class="badge-text">All Systems Operational</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h1 class="hero-title">
+                            Landslide
+                            <span class="hero-title-accent">Early Warning System</span>
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="hero-subtitle">
+                            Real-time monitoring and alert system protecting lives through advanced sensor technology and data-driven insights.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons">
+                            <a href="{% url 'signin' %}" class="btn-hero-primary">
+                                <i class="fas fa-chart-line"></i>
+                                Login to Dashboard
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#features" class="btn-hero-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </a>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Monitoring</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Sensors Active</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">Real-time</div>
+                                <div class="stat-label">Data Analysis</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual -->
+                    <div class="col-lg-6 hero-visual">
+                        <div class="hero-dashboard-preview">
+                            <div class="dashboard-header">
+                                <div class="dashboard-dots">
+                                    <span class="dashboard-dot dashboard-dot-red"></span>
+                                    <span class="dashboard-dot dashboard-dot-yellow"></span>
+                                    <span class="dashboard-dot dashboard-dot-green"></span>
+                                </div>
+                                <span class="dashboard-title">LEWS Dashboard</span>
+                            </div>
+                            <div class="dashboard-content">
+                                <div class="dashboard-card">
+                                    <div class="dashboard-card-header">
+                                        <span class="dashboard-card-title">System Status</span>
+                                        <span class="status-badge status-badge-safe">
+                                            <i class="fas fa-check-circle"></i> Normal
+                                        </span>
+                                    </div>
+                                    <div class="dashboard-value">All Clear</div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-card-header">
+                                        <span class="dashboard-card-title">Sensor Activity</span>
+                                        <span class="status-badge status-badge-warning">
+                                            <i class="fas fa-chart-line"></i> Live
+                                        </span>
+                                    </div>
+                                    <div class="dashboard-chart">
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section section-padding-lg" id="features">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <span class="section-label">Capabilities</span>
+                    <h2 class="section-title">Powerful Monitoring Features</h2>
+                    <p class="section-description">
+                        Comprehensive tools designed to detect, analyze, and alert on potential landslide hazards in real-time.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="row g-4">
+                    <!-- Feature 1: Real-time Monitoring -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <h3 class="feature-title">Real-time Monitoring</h3>
+                            <p class="feature-description">
+                                Continuous sensor data collection from NMHS monitoring stations across critical zones.
+                            </p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Live sensor feeds</li>
+                                <li><i class="fas fa-check"></i> Multi-parameter tracking</li>
+                                <li><i class="fas fa-check"></i> Instant data sync</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Alert System -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3 class="feature-title">Alert Notifications</h3>
+                            <p class="feature-description">
+                                Multi-tier alert system with instant notifications when thresholds are exceeded.
+                            </p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Tiered warning levels</li>
+                                <li><i class="fas fa-check"></i> SMS & email alerts</li>
+                                <li><i class="fas fa-check"></i> Mobile app push</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Data Visualization -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <h3 class="feature-title">Data Visualization</h3>
+                            <p class="feature-description">
+                                Interactive dashboards with intuitive charts, graphs, and mapping visualizations.
+                            </p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Interactive charts</li>
+                                <li><i class="fas fa-check"></i> Custom date ranges</li>
+                                <li><i class="fas fa-check"></i> Export capabilities</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Historical Analysis -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h3 class="feature-title">Historical Analysis</h3>
+                            <p class="feature-description">
+                                Comprehensive data archives enabling trend analysis and predictive insights.
+                            </p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Trend identification</li>
+                                <li><i class="fas fa-check"></i> Pattern recognition</li>
+                                <li><i class="fas fa-check"></i> Research support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding-lg" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- About Content -->
+                    <div class="col-lg-6 about-content">
+                        <span class="about-label">About LEWS</span>
+                        <h2 class="about-title">Joint Collaborative Development for Himalayan Safety</h2>
+
+                        <p class="about-text">
+                            The Landslide Early Warning System (LEWS) is a state-of-the-art monitoring platform designed to protect vulnerable communities in landslide-prone regions of the Himalayas.
+                        </p>
+
+                        <p class="about-text">
+                            This system has been developed through a collaborative effort between two premier Indian research institutions, combining expertise in structural engineering, geotechnical monitoring, and advanced data analytics.
+                        </p>
+
+                        <!-- Mission Statement -->
+                        <div class="about-mission">
+                            <h4 class="about-mission-title">
+                                <i class="fas fa-bullseye"></i>
+                                Our Mission
+                            </h4>
+                            <p class="about-mission-text">
+                                To provide accurate, timely, and actionable early warnings for landslide hazards, enabling communities and authorities to take preventive measures and save lives through the power of continuous monitoring and advanced sensor technology.
+                            </p>
+                        </div>
+
+                        <!-- Partners -->
+                        <div class="partners-grid">
+                            <div class="partner-card">
+                                <div class="partner-icon">
+                                    <i class="fas fa-building-columns"></i>
+                                </div>
+                                <div>
+                                    <div class="partner-name">CSIR-CBRI</div>
+                                    <div class="partner-role">Research Partner</div>
+                                </div>
+                            </div>
+                            <div class="partner-card">
+                                <div class="partner-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <div class="partner-name">IIT Roorkee</div>
+                                    <div class="partner-role">Technical Partner</div>
+                                </div>
+                            </div>
+                            <div class="partner-card">
+                                <div class="partner-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <div class="partner-name">NMHS</div>
+                                    <div class="partner-role">Funding Agency</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Visual -->
+                    <div class="col-lg-6 about-visual">
+                        <div class="about-image-wrapper">
+                            <div class="about-image-content">
+                                <div class="about-image-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <h3 class="about-image-title">Protecting the Himalayas</h3>
+                                <p class="about-image-text">
+                                    Advanced sensor networks monitoring critical zones across the National Mission on Himalayan Studies (NMHS) project areas.
+                                </p>
+
+                                <div class="about-stats-row">
+                                    <div class="about-stat">
+                                        <div class="about-stat-number">5+</div>
+                                        <div class="about-stat-label">Years Active</div>
+                                    </div>
+                                    <div class="about-stat">
+                                        <div class="about-stat-number">50+</div>
+                                        <div class="about-stat-label">Locations</div>
+                                    </div>
+                                    <div class="about-stat">
+                                        <div class="about-stat-number">1M+</div>
+                                        <div class="about-stat-label">Data Points</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding" id="contact">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Access the Dashboard?</h2>
+                    <p class="cta-description">
+                        Login to view real-time sensor data, analyze trends, and stay informed about potential hazards in monitored regions.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="{% url 'signin' %}" class="btn-cta-primary">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login to Dashboard
+                        </a>
+                        <a href="mailto:contact@lews.gov.in" class="btn-cta-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-lews">
+        <div class="container">
+            <!-- Footer Main -->
+            <div class="footer-main">
+                <div class="row g-4">
+                    <!-- Brand Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-brand">
+                            <div class="footer-brand-logo">
+                                <div class="footer-logo-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <span class="footer-logo-text">LEWS</span>
+                            </div>
+                            <p class="footer-brand-description">
+                                Landslide Early Warning System - Real-time monitoring and alert system for NMHS sensor data, developed for the safety of Himalayan communities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#about">
+                                    Our Mission
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:contact@lews.gov.in">
+                                    Contact Us
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about">
+                                    About Us
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#features">
+                                    Features
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Download Apps -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-heading">Mobile Apps</h4>
+                        <div class="app-buttons">
+                            <a href="{% static 'App.apk' %}" class="btn-app-download">
+                                <i class="fab fa-android"></i>
+                                <div class="app-download-text">
+                                    <span class="app-download-label">Download</span>
+                                    <span class="app-download-name">LEWS App</span>
+                                </div>
+                            </a>
+                            <a href="{% static 'IIT_inside.apk' %}" class="btn-app-download">
+                                <i class="fas fa-mobile-screen-button"></i>
+                                <div class="app-download-text">
+                                    <span class="app-download-label">Download</span>
+                                    <span class="app-download-name">IIT Inside App</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Partners -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-heading">Our Partners</h4>
+                        <div class="footer-partners">
+                            <div class="footer-partner">
+                                <i class="fas fa-building-columns"></i>
+                                <span>CSIR-CBRI</span>
+                            </div>
+                            <div class="footer-partner">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>IIT Roorkee</span>
+                            </div>
+                            <div class="footer-partner">
+                                <i class="fas fa-leaf"></i>
+                                <span>NMHS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        &copy; 2024 CSIR-CBRI & IIT Roorkee. All rights reserved.
+                    </p>
+                    <p class="footer-funded">
+                        <i class="fas fa-award"></i>
+                        Funded by National Mission on Himalayan Studies (NMHS)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.btn-nav-login)');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+
+        // Animate elements on scroll (simple IntersectionObserver)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .partner-card, .about-mission').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

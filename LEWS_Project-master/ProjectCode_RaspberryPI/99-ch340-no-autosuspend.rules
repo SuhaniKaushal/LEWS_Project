@@ -1,0 +1,14 @@
+# Disable USB autosuspend for WCH CH340/CH341 USB-serial adapters (idVendor 1a86).
+# Autosuspend is a documented cause of the CH340 driver wedging into a state
+# where bytes silently stop arriving from userspace's perspective — this is the
+# root cause of the long-running hang in New_net.py on the LEWS gateway Pi.
+#
+# Install:
+#   sudo cp 99-ch340-no-autosuspend.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload
+#   sudo udevadm trigger --action=add --attr-match=idVendor=1a86
+# Verify (replace X-Y with the actual hub path for the device):
+#   cat /sys/bus/usb/devices/X-Y/power/control   # should print "on"
+
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1a86", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1a86", ATTR{power/autosuspend_delay_ms}="-1"

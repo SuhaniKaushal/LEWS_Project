@@ -1,0 +1,351 @@
+/**
+ * LEWS Contact Page Styles
+ * Version: 1.0.0
+ */
+
+/* ========================================================================
+   CONTACT HERO
+   ======================================================================== */
+
+.contact-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: var(--neutral-white);
+    overflow: hidden;
+    padding: 7rem 0 5rem;
+}
+
+.contact-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 35px,
+        rgba(0,0,0,.05) 35px,
+        rgba(0,0,0,.05) 70px
+    );
+}
+
+.contact-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact-hero .hero-badge {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--neutral-white);
+}
+
+.contact-hero .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-hero .hero-title .highlight {
+    color: var(--neutral-white);
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ========================================================================
+   CONTACT INFO CARDS
+   ======================================================================== */
+
+.section-contact-info {
+    background: var(--neutral-white);
+    padding: 5rem 0;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info-card {
+    background: var(--neutral-white);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    text-align: center;
+    border: 2px solid var(--neutral-200);
+    transition: all var(--transition-base);
+    height: 100%;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-orange);
+}
+
+.contact-info-card.highlight-card {
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    border-color: var(--accent-orange);
+    color: var(--neutral-white);
+}
+
+.contact-info-card.highlight-card .contact-info-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--neutral-white);
+}
+
+.contact-info-card.highlight-card .contact-info-title,
+.contact-info-card.highlight-card .contact-info-text,
+.contact-info-card.highlight-card .contact-info-link {
+    color: var(--neutral-white);
+}
+
+.contact-info-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    border-radius: var(--radius-full);
+    color: var(--neutral-white);
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.contact-info-title {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    font-weight: var(--font-semibold);
+    color: var(--neutral-900);
+    margin-bottom: 0.75rem;
+}
+
+.contact-info-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--neutral-600);
+    margin-bottom: 1rem;
+}
+
+.contact-info-link {
+    font-family: var(--font-subheading);
+    font-size: 1.125rem;
+    font-weight: var(--font-semibold);
+    color: var(--accent-orange);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.contact-info-link:hover {
+    color: var(--accent-orange-dark);
+    text-decoration: underline;
+}
+
+/* ========================================================================
+   LOCATIONS SECTION
+   ======================================================================== */
+
+.section-locations {
+    background: var(--neutral-50);
+    padding: 5rem 0;
+}
+
+.location-card {
+    background: var(--neutral-white);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--neutral-200);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    height: 100%;
+}
+
+.location-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-orange);
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--neutral-50), var(--neutral-100));
+    border-bottom: 2px solid var(--neutral-200);
+}
+
+.location-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+    border-radius: var(--radius-lg);
+    color: var(--neutral-white);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.location-name {
+    font-family: var(--font-subheading);
+    font-size: 1.75rem;
+    font-weight: var(--font-bold);
+    color: var(--neutral-900);
+    margin-bottom: 0.25rem;
+}
+
+.location-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--neutral-600);
+    margin: 0;
+}
+
+.location-body {
+    padding: 2rem;
+}
+
+.location-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--neutral-700);
+    border-bottom: 1px solid var(--neutral-100);
+}
+
+.location-detail:last-child {
+    border-bottom: none;
+}
+
+.location-detail i {
+    width: 20px;
+    color: var(--accent-orange);
+    font-size: 1.125rem;
+}
+
+/* ========================================================================
+   FAQ SECTION
+   ======================================================================== */
+
+.section-faq {
+    background: var(--neutral-white);
+    padding: 5rem 0;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 16px;
+    --bs-accordion-bg: var(--neutral-50);
+    --bs-accordion-border-color: var(--neutral-200);
+    --bs-accordion-active-bg: var(--neutral-white);
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden;
+    border: 2px solid var(--neutral-200) !important;
+}
+
+.accordion-button {
+    font-family: var(--font-subheading);
+    font-size: 1.125rem;
+    font-weight: var(--font-semibold);
+    color: var(--neutral-900);
+    padding: 1.5rem;
+    background: var(--neutral-50);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, var(--accent-orange-100), var(--accent-amber-100));
+    color: var(--accent-orange);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--accent-orange);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff6b35'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--neutral-700);
+    padding: 1.5rem;
+    background: var(--neutral-white);
+}
+
+/* ========================================================================
+   RESPONSIVE DESIGN
+   ======================================================================== */
+
+@media (max-width: 767.98px) {
+    .contact-hero {
+        padding: 5rem 0 3rem;
+        min-height: 350px;
+    }
+
+    .contact-hero .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .section-contact-info,
+    .section-locations,
+    .section-faq {
+        padding: 3rem 0;
+    }
+
+    .location-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .location-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-info-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .location-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}

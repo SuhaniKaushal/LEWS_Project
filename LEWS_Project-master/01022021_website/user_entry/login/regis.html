@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>LEWS</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <!--<div class="loader_bg">
+         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
+      </div>-->
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="container-fluid" style="background-color: #121010e5;">
+		       <div class="row d_flex">
+		          <div class="mr-auto ml-auto text-center">
+		             <div class="heading text_align_center">
+		                <h1 class="heading" style="color:whitesmoke">Landslide Early Warning System</h1>
+		             </div>
+		          </div>
+		       </div>
+    	</div>
+      </header>
+      <!-- end header -->
+      <!-- start slider section -->
+      <!--<div class=" banner_main">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="club">
+                     <div class="poa_t">
+                        <h1>Landslide Early Warning System</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>-->
+      <!-- end slider section -->
+      <!-- card section -->
+      <div class="d-flex justify-content-center align-items-center mt-5">
+         <div class="cardsign">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                 <li class="nav-item text-center">
+                   <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a>
+                 </li>
+                 <li class="nav-item text-center">
+                   <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Register</a>
+                 </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+               	<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+               		<form method="post" action="login_page" id="login">
+                  		<div class="form px-4 pt-5 ">
+                    		<input type="text" name="t11" class="form-control" placeholder="Email or Phone">
+                     		<input type="password" name="t12" class="form-control" placeholder="Password" autocomplete="off">
+                     		<input type="hidden" value="web" name="web">
+                     		<button class="btn btn-dark btn-block" type="submit" onclick="login_check()">Login</button>
+                  		</div>
+                  	</form>
+               </div>
+               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+               	   <form method=post action="regis_page" id="registration">
+                  	<div class="form px-4">
+                     	<input type="text" name="t1" class="form-control" placeholder="Name">
+                     	<input type="text" name="t2" class="form-control" placeholder="Email">
+                     	<input type="text" name="t3" class="form-control" placeholder="Phone">
+                     	<input type="text" name="t4" class="form-control" placeholder="Password">
+                     	<button class="btn btn-dark btn-block" type="submit">Register</button>
+                  	</div>
+                  </form
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- footer -->
+      <div class="footer" style="background-color: #121010e5;">
+	        <H3><p style="color:red">{{message}}</p></H3>
+	        <div class="container-xxl">
+	          <ul class="nav nav-tabs justify-content-center">
+	            <li class="nav-link"> <a href=contact.html> Our Mission</a> </br>
+	            <li class="nav-link"> <a href=contact.html>Contact us</a> </br>
+	            <li class="nav-link"> <a href='static/App.apk'>DOWNLOAD APP</a> </br>
+	            <li class="nav-link"> <a href='static/IIT_inside.apk'>INSIDE IIT DOWNLOAD APP</a> </br>
+	            <li class="nav-link"> <a href=about.html>About us</a>
+	          </ul>
+	        </div>
+	        <div class="container-fluid" style="text-align: center; color:rgb(106, 101, 101)">
+	          <p style="font-size:medium;">This website has been designed for monitoring sensor data of NMHS</p>
+	          <p style="font-size:medium;">Joint Collaborative Development of CSIR-CBRI and IIT-Roorkee</p>
+	          <p style="font-size:medium;">Funded by NMHS</p>
+	        </div>
+    </div>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>

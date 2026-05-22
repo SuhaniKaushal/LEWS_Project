@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(py:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(python manage.py showmigrations:*)"
+    ]
+  }
+}

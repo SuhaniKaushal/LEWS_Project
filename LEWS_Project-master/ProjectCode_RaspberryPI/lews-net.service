@@ -1,0 +1,38 @@
+[Unit]
+Description=LEWS Pi gateway: serial -> TCP forwarder for sensor data
+Documentation=file:///home/pi/Raspberry/LEWS_Project/ProjectCode_RaspberryPI/New_net.py
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Edit these two paths to match the install location on this Pi:
+WorkingDirectory=/home/pi/Raspberry/LEWS_Project/ProjectCode_RaspberryPI
+ExecStart=/usr/bin/python3 /home/pi/Raspberry/LEWS_Project/ProjectCode_RaspberryPI/New_net.py
+
+# Run as root so USB reset (USBDEVFS_RESET) can succeed. The script is
+# single-purpose on a dedicated gateway Pi; user separation is not the
+# threat model. If you prefer running as pi, remove this and grant the
+# pi user write access to /dev/bus/usb/ via the udev rule.
+User=root
+
+# Auto-restart on any exit (crash, watchdog os._exit, OOM, etc.)
+Restart=always
+RestartSec=10
+
+# Defensive: cycle the process weekly even if it looks healthy. All state
+# is on disk, so the restart loses no buffered data.
+RuntimeMaxSec=604800
+
+# Logs go to journald (rotates automatically). The script also keeps its
+# own RotatingFileHandler logs in the working directory.
+StandardOutput=journal
+StandardError=journal
+
+# Modest hardening (safe for this script's needs)
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=false
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Visualization - LEWS</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile-nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/data-visualization-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    {% include 'navbar-include.html' %}
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Animated Background -->
+        <div class="viz-background">
+            <div class="bg-pattern"></div>
+        </div>
+
+        <div class="container viz-container">
+        <!-- Success Banner -->
+        <div class="success-banner">
+            <div class="banner-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="banner-content">
+                <h2 class="banner-title">Data Visualization Generated Successfully</h2>
+                <p class="banner-description">Your sensor data has been processed and visualized below</p>
+            </div>
+        </div>
+
+        <!-- Chart Card -->
+        <div class="chart-card">
+            <div class="chart-card-header">
+                <div class="chart-header-left">
+                    <i class="fas fa-chart-line me-2"></i>
+                    <h3 class="chart-title">Sensor Data Analysis</h3>
+                </div>
+                <div class="chart-header-right">
+                    {% if chart %}
+                    <a href="data:image/png;base64,{{ chart|safe }}" download="LEWS_Sensor_Data.png" class="btn-download">
+                        <i class="fas fa-download me-2"></i>Download Image
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="chart-card-body">
+                {% if chart %}
+                <div class="chart-container">
+                    <img src="data:image/png;base64,{{ chart|safe }}" alt="Sensor Data Visualization" class="chart-image">
+                </div>
+                {% else %}
+                <div class="no-data-message">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>No data available to display</p>
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="chart-card-footer">
+                <div class="footer-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <span>Generated on {{ current_date|default:"Today" }} at {{ current_time|default:"Now" }}</span>
+                </div>
+                <div class="footer-actions">
+                    <a href="{% url 'home' %}" class="btn-footer-action btn-secondary">
+                        <i class="fas fa-redo me-2"></i>Generate New Visualization
+                    </a>
+                    <a href="{% url 'download' %}" class="btn-footer-action btn-primary">
+                        <i class="fas fa-database me-2"></i>Request Full Dataset
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Panel -->
+        <div class="quick-actions-panel">
+            <h4 class="panel-title">
+                <i class="fas fa-bolt me-2"></i>Quick Actions
+            </h4>
+            <div class="actions-grid">
+                <a href="{% url 'home' %}" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5 class="action-title">Change Filters</h5>
+                        <p class="action-description">Modify sensor types and locations</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'fetch_info' %}" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5 class="action-title">Adjust Time Range</h5>
+                        <p class="action-description">Change date and time parameters</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'download' %}" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5 class="action-title">Download Data</h5>
+                        <p class="action-description">Export raw sensor data</p>
+                    </div>
+                </a>
+
+                <a href="#" class="action-card" onclick="window.print(); return false;">
+                    <div class="action-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5 class="action-title">Print Report</h5>
+                        <p class="action-description">Generate printable version</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    {% include 'footer-include.html' %}
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Navigation JS -->
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scroll behavior
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                if (target !== '#') {
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top - 100
+                    }, 500);
+                }
+            });
+
+            // Add fade-in animation to chart
+            $('.chart-container').hide().fadeIn(1000);
+
+            // Add hover effect to action cards
+            $('.action-card').hover(
+                function() {
+                    $(this).find('.action-icon').addClass('icon-bounce');
+                },
+                function() {
+                    $(this).find('.action-icon').removeClass('icon-bounce');
+                }
+            );
+
+            // Get current date and time if not provided
+            {% if not current_date %}
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            const timeStr = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            $('.footer-info span').text('Generated on ' + dateStr + ' at ' + timeStr);
+            {% endif %}
+        });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

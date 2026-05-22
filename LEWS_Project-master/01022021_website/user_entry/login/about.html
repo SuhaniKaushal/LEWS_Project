@@ -1,0 +1,454 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Learn about the Landslide Early Warning System (LEWS) - A collaborative project by CSIR-CBRI and IIT-Roorkee funded by NMHS">
+    <title>About Us - LEWS | Landslide Early Warning System</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile-nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    {% include 'navbar-include.html' %}
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-mountain"></i>
+                    <span>About LEWS</span>
+                </div>
+                <h1 class="hero-title"><span class="highlight">Protecting Lives Through<br> Advanced Technology</span></h1>
+                <p class="hero-description">
+                    The Landslide Early Warning System (LEWS) is a cutting-edge monitoring platform
+                    that combines real-time sensor data with predictive analytics using Artificial Intelligence to prevent landslide
+                    disasters and save lives across vulnerable regions.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">Active Sensors</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Monitoring Sites</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Live Monitoring</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section-overview">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-subtitle">Comprehensive landslide monitoring and early warning system</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To create a nationwide network of landslide early warning systems that
+                            protect communities and infrastructure through advanced technology and
+                            real-time monitoring.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To develop, deploy, and maintain cutting-edge sensor technology integrated
+                            with predictive analytics to provide timely warnings and save lives in
+                            landslide-prone areas.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>
+                            Innovation, accuracy, reliability, and community safety drive everything we do.
+                            We are committed to excellence in research, development, and deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="section-collaboration">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Strategic Partnership</h2>
+                <p class="section-subtitle">Excellence through collaboration</p>
+            </div>
+            <div class="collaboration-grid">
+                <div class="collaboration-card">
+                    <div class="collaboration-logo">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>CSIR-CBRI</h3>
+                    <h4>Central Building Research Institute</h4>
+                    <p>
+                        A premier research institution under the Council of Scientific and Industrial
+                        Research (CSIR), bringing decades of expertise in construction engineering,
+                        geotechnical studies, and disaster mitigation technologies.
+                    </p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check-circle"></i> Geotechnical Engineering</li>
+                        <li><i class="fas fa-check-circle"></i> Structural Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Disaster Mitigation</li>
+                        <li><i class="fas fa-check-circle"></i> Material Science</li>
+                    </ul>
+                </div>
+                <div class="collaboration-divider">
+                    <div class="divider-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+                <div class="collaboration-card">
+                    <div class="collaboration-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>IIT-Roorkee</h3>
+                    <h4>Indian Institute of Technology</h4>
+                    <p>
+                        One of India's foremost engineering and research institutions, contributing
+                        advanced computational modeling, sensor technology, and cutting-edge research
+                        in earth sciences and civil engineering.
+                    </p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check-circle"></i> Computational Modeling</li>
+                        <li><i class="fas fa-check-circle"></i> Sensor Technology</li>
+                        <li><i class="fas fa-check-circle"></i> Data Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Earth Sciences</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NMHS Integration -->
+    <section class="section-nmhs">
+        <div class="container">
+            <div class="nmhs-content">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="nmhs-info">
+                            <div class="info-badge">
+                                <i class="fas fa-award"></i>
+                                <span>Funded By</span>
+                            </div>
+                            <h2>National Mission on Himalayan Studies (NMHS)</h2>
+                            <p class="lead">
+                                This project is proudly funded by NMHS, a flagship program of the
+                                Ministry of Environment, Forest and Climate Change, Government of India.
+                            </p>
+                            <p>
+                                NMHS aims to evolve a sustainable national capacity to understand the
+                                complexities of Himalayan ecosystems and their responses to climate change.
+                                Our landslide early warning system aligns perfectly with this mission by
+                                protecting communities in the Himalayan region.
+                            </p>
+                            <div class="nmhs-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-satellite"></i>
+                                    <div>
+                                        <strong>Sensor Network</strong>
+                                        <p>500+ sensors across 15 critical locations</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-database"></i>
+                                    <div>
+                                        <strong>Data Collection</strong>
+                                        <p>Real-time monitoring with 5-minute intervals</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-brain"></i>
+                                    <div>
+                                        <strong>AI Analytics</strong>
+                                        <p>Machine learning for predictive analysis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="sensor-diagram">
+                            <div class="diagram-card">
+                                <div class="diagram-header">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>Sensor Network Architecture</span>
+                                </div>
+                                <div class="diagram-body">
+                                    <div class="sensor-layer">
+                                        <div class="layer-label">Field Sensors</div>
+                                        <div class="sensor-nodes">
+                                            <div class="sensor-node"><i class="fas fa-thermometer-half"></i></div>
+                                            <div class="sensor-node"><i class="fas fa-tint"></i></div>
+                                            <div class="sensor-node"><i class="fas fa-compress-arrows-alt"></i></div>
+                                            <div class="sensor-node"><i class="fas fa-wind"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="connection-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="sensor-layer">
+                                        <div class="layer-label">Data Aggregation</div>
+                                        <div class="sensor-nodes">
+                                            <div class="sensor-node large"><i class="fas fa-server"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="connection-arrow">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="sensor-layer">
+                                        <div class="layer-label">Analysis & Alert</div>
+                                        <div class="sensor-nodes">
+                                            <div class="sensor-node"><i class="fas fa-chart-line"></i></div>
+                                            <div class="sensor-node"><i class="fas fa-bell"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="section-technology">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Technology Stack</h2>
+                <p class="section-subtitle">Built with cutting-edge tools and frameworks</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3><i class="fas fa-code"></i> Backend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Django 3.0.7</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">REST APIs</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">CSS3</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Bootstrap 5</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-chart-bar"></i> Analytics</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Matplotlib</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">SciPy</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-microchip"></i> IoT & Sensors</h3>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Raspberry Pi</span>
+                        <span class="tech-badge">Arduino</span>
+                        <span class="tech-badge">LoRaWAN</span>
+                        <span class="tech-badge">MQTT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-team">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">Expert researchers and engineers dedicated to saving lives</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Dr. Principal Investigator</h4>
+                    <p class="team-role">Project Lead - CSIR-CBRI</p>
+                    <p class="team-bio">Leading geotechnical expert with 25+ years in disaster mitigation</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Prof. Co-Investigator</h4>
+                    <p class="team-role">Technical Lead - IIT-Roorkee</p>
+                    <p class="team-bio">Specialist in computational modeling and sensor networks</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h4>Research Team</h4>
+                    <p class="team-role">15+ Researchers & Engineers</p>
+                    <p class="team-bio">Multidisciplinary team working on hardware, software, and analytics</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Field Experts</h4>
+                    <p class="team-role">Site Technicians & Operators</p>
+                    <p class="team-bio">On-ground team ensuring 24/7 monitoring and maintenance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section-impact">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Making a difference in community safety</p>
+            </div>
+            <div class="impact-stats">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="impact-value counter" data-target="50000">0</div>
+                    <div class="impact-label">Lives Protected</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="impact-value counter" data-target="150">0</div>
+                    <div class="impact-label">Square KM Monitored</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="impact-value counter" data-target="25">0</div>
+                    <div class="impact-label">Warnings Issued</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="impact-value"><span class="counter" data-target="98">0</span>%</div>
+                    <div class="impact-label">Accuracy Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'footer-include.html' %}
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script>
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // Trigger counter animation when section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.disconnect();
+                }
+            });
+        });
+
+        const impactSection = document.querySelector('.section-impact');
+        if (impactSection) {
+            observer.observe(impactSection);
+        }
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

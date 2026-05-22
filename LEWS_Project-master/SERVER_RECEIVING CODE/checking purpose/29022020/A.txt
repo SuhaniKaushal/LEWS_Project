@@ -1,0 +1,4 @@
+2021-02-18 15:35:11.357272
+c1@netala@n1(moisture1:40.70)(voltage1:3.72)(vols1:2311.00)(pitch1:-95)(roll1:-95)(pitch2:86)(roll2:-2)(pitch3:-95)(roll3:-95)(pitch4:84)(roll4:3)
+2021-02-18 15:35:39.710394
+c1@netala@n1(moisture1:40.70)(voltage1:3.72)(vols1:2311.00)(pitch1:-95)(roll1:-95)(pitch2:86)(roll2:-2)(pitch3:-95)(roll3:-95)(pitch4:84)(roll4:3)

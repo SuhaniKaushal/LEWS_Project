@@ -1,0 +1,293 @@
+{% load static %}
+<!-- Skip to Content Link for Accessibility -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- Main Navigation -->
+<nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+        <!-- Logo and Branding -->
+        <div class="nav-brand">
+            <a href="{% if user_name %}{% url 'home' %}{% else %}{% url 'landing' %}{% endif %}" class="brand-link">
+                <i class="fas fa-mountain brand-icon"></i>
+                <div class="brand-text">
+                    <span class="brand-title">LEWS</span>
+                    <span class="brand-subtitle">Early Warning System</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Desktop Navigation Menu -->
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a href="{% if user_name %}{% url 'home' %}{% else %}{% url 'landing' %}{% endif %}" class="nav-link" data-page="home">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <!-- Monitoring (Mega Menu) -->
+                <li class="nav-item has-mega-menu">
+                    <a href="#" class="nav-link" data-page="monitoring" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span>Monitoring</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-container">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <i class="fas fa-layer-group"></i>
+                                    Data Selection
+                                </h3>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="{% url 'home' %}" class="mega-menu-link">
+                                            <i class="fas fa-filter"></i>
+                                            <div>
+                                                <strong>Sensor Selection</strong>
+                                                <small>Choose sensors and locations</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'fetch_info' %}" class="mega-menu-link">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <div>
+                                                <strong>Configure Data View</strong>
+                                                <small>Set time ranges and options</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <i class="fas fa-chart-bar"></i>
+                                    Visualization
+                                </h3>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="{% url 'coming_soon' %}" class="mega-menu-link">
+                                            <i class="fas fa-chart-area"></i>
+                                            <div>
+                                                <strong>Time Series</strong>
+                                                <small>View sensor data over time</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'coming_soon' %}" class="mega-menu-link">
+                                            <i class="fas fa-chart-pie"></i>
+                                            <div>
+                                                <strong>Statistical Analysis</strong>
+                                                <small>Analyze data patterns</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <i class="fas fa-bell"></i>
+                                    Alerts
+                                </h3>
+                                <ul class="mega-menu-list">
+                                    <li>
+                                        <a href="{% url 'coming_soon' %}" class="mega-menu-link">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <div>
+                                                <strong>Active Warnings</strong>
+                                                <small>Current alert status</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'coming_soon' %}" class="mega-menu-link">
+                                            <i class="fas fa-history"></i>
+                                            <div>
+                                                <strong>Alert History</strong>
+                                                <small>Past notifications</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Data Request -->
+                <li class="nav-item">
+                    <a href="{% url 'download' %}" class="nav-link" data-page="download">
+                        <i class="fas fa-database nav-icon"></i>
+                        <span>Data Request</span>
+                    </a>
+                </li>
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link" data-page="about">
+                        <i class="fas fa-info-circle nav-icon"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link" data-page="contact">
+                        <i class="fas fa-envelope nav-icon"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                <!-- Search -->
+                <div class="nav-search">
+                    <button class="search-toggle" id="searchToggle" aria-label="Toggle search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-dropdown" id="searchDropdown">
+                        <form class="search-form" action="#" method="get">
+                            <input
+                                type="search"
+                                class="search-input"
+                                placeholder="Search sensors, locations..."
+                                aria-label="Search"
+                                name="q"
+                            >
+                            <button type="submit" class="search-submit" aria-label="Submit search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="nav-notifications">
+                    <button class="notification-toggle" id="notificationToggle" aria-label="View notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="notification-dropdown" id="notificationDropdown">
+                        <div class="notification-header">
+                            <h4>Notifications</h4>
+                            <button class="mark-all-read">Mark all as read</button>
+                        </div>
+                        <ul class="notification-list">
+                            <li class="notification-item unread">
+                                <div class="notification-icon status-warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>Sensor Alert</strong>
+                                    <p>Sensor ID-245 reading above threshold</p>
+                                    <time>5 minutes ago</time>
+                                </div>
+                            </li>
+                            <li class="notification-item unread">
+                                <div class="notification-icon status-info">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>System Update</strong>
+                                    <p>New features available in dashboard</p>
+                                    <time>2 hours ago</time>
+                                </div>
+                            </li>
+                            <li class="notification-item">
+                                <div class="notification-icon status-success">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>Data Export Complete</strong>
+                                    <p>Your requested dataset is ready</p>
+                                    <time>1 day ago</time>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="view-all-notifications">View all notifications</a>
+                    </div>
+                </div>
+
+                <!-- User Menu -->
+                <div class="nav-user">
+                    <button class="user-toggle" id="userToggle" aria-label="User menu" aria-expanded="false">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="user-name">{{ user_name|default:"User" }}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-info">
+                            <div class="user-avatar-large">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <strong>{{ user_name|default:"User" }}</strong>
+                                <small>{{ user_email|default:"user@lews.org" }}</small>
+                            </div>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <ul class="user-menu-list">
+                            <li>
+                                <a href="#" class="user-menu-link">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="user-menu-link">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="user-menu-link">
+                                    <i class="fas fa-download"></i>
+                                    <span>My Downloads</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="dropdown-divider">
+                        <a href="{% url 'logout' %}" class="logout-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+</nav>
+
+<!-- Breadcrumbs (for deep pages) -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb" id="breadcrumbNav" style="display: none;">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'home' %}">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <!-- Dynamic breadcrumb populated by JavaScript -->
+            </li>
+        </ol>
+    </div>
+</nav>

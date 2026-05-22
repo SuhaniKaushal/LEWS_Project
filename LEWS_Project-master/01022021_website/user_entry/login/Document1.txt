@@ -1,0 +1,8 @@
+select min(sensor_value) from sensor_data where sensor_id in ('nt_n1_pi2_r')
+UPDATE public.sensor_data SET
+sensor_value = '-2.0050790842983'::numeric WHERE
+sensor_id = 'nt_n1_pi2_r' AND receive_time = '2021-05-24 08:09:59.955306';
+
+select * from sensor_data where sensor_id in ('nt_n1_pi2_r','nt_n1_pi2_f') and receive_time>='2021-05-24 00:41:51' order  by receive_time
+
+select * from sensor_data where sensor_id in ('nt_n1_pi2_r','nt_n1_pi2_f') and receive_time>='2021-05-24 00:41:51' order  by receive_time

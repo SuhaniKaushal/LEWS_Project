@@ -1,0 +1,58 @@
+<html><head>
+<script type='text/javascript'>
+alert('HI')
+
+</script>
+<style type="text/css">
+
+#t_data
+{
+  margin-top:850px;
+  margin-left:300px;
+  position:fixed
+}
+
+</style>
+</head>
+<body bgcolor='#FAFAFF'>
+{% block content %}
+{% autoescape off %}
+				{{hyper_data}}
+	    {% endautoescape %}
+<div>
+     {% csrf_token %}
+    {% autoescape off %}
+	 	<img width=700 height=700 id='img' src={{image_path}}>
+	 {% endautoescape %}
+
+ </form>
+	<form action='fetch_info' method='post'>
+	<input type='hidden' value='app' name='val'>
+    <p id='id3'>Sensor Type</p>
+
+    {% autoescape off %}
+		 	 	{{sensor}}
+	{% endautoescape %}
+
+    </div>
+
+
+
+    {% autoescape off %}
+			 	 	{{location}}
+	{% endautoescape %}
+
+    <input type=submit value="CLICK" >
+    </form>
+
+ </br><br>
+
+
+{% autoescape off %}
+			 	 	{{location}}
+	{% endautoescape %}
+
+
+{% endblock %}
+
+</html></body>

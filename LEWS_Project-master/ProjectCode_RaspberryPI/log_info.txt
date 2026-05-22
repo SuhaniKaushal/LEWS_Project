@@ -1,0 +1,602 @@
+2026-02-11 16:32:00.471463 - Internet down / bad link → restarting modem manager. Reason: No ping response
+2026-02-11 16:34:01.036643 - Internet down / bad link → restarting modem manager. Reason: No ping response
+2026-02-11 18:12:48.275505 - Internet down / bad link → restarting modem manager. Reason: No ping response
+2026-02-11 18:14:10.308579 - Internet down / bad link → restarting modem manager. Reason: No ping response
+2026-02-11 18:15:10.613037 - Internet down / bad link → restarting modem manager. Reason: No ping response
+2026-02-11 18:15:39.030617 - Internet down / bad link → restarting modem manager. Reason: Unknown error
+2026-02-28 12:39:49.670328 - Internet down → restarting modem manager. Reason: No ping response
+2026-02-28 12:40:05.225689 - Internet down → restarting modem manager. Reason: No ping response
+2026-02-28 12:40:57.225206 - Internet down → restarting modem manager. Reason: No ping response
+2026-02-28 12:42:02.580877 - Internet down → restarting modem manager. Reason: No ping response
+2026-03-11 17:57:30.411900 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:04:21.423529 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:13:36.435328 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:22:51.447586 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:32:06.459693 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:41:21.471222 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:50:36.483410 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 18:59:51.495335 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:09:06.507250 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:18:21.519759 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:27:36.531878 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:36:51.544489 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:46:06.556208 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 19:55:21.568571 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:04:36.579851 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:13:51.592684 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:23:06.604790 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:32:21.616790 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:41:36.628832 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 20:50:51.641262 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:00:06.656535 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:09:21.670403 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:18:36.686887 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:27:51.701875 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:37:06.714773 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:46:21.729947 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 21:55:36.750273 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:04:51.762227 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:14:06.775250 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:23:21.787432 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:32:36.798960 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:41:51.810667 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 22:51:06.823486 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:00:21.835836 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:09:36.848789 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:18:51.860536 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:28:06.873172 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:37:21.885431 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:46:36.899216 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-11 23:55:51.912007 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:05:06.923741 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:14:21.936638 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:23:36.949481 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:32:51.962349 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:42:06.974823 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 00:51:21.990933 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:00:37.005478 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:09:52.018149 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:19:07.030213 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:28:22.047264 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:37:37.059340 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:46:52.072607 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 01:56:07.085440 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:05:22.099114 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:14:37.111457 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:23:52.124727 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:33:07.136154 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:42:22.148162 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 02:51:37.161772 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:00:52.174306 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:10:07.185814 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:19:22.198046 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:28:37.208676 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:37:52.221646 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:47:07.240031 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 03:56:22.255360 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:05:37.274055 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:14:52.287062 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:24:07.302194 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:33:22.318522 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:42:37.330885 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 04:51:52.344893 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:01:07.358782 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:10:22.371987 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:19:37.383541 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:28:52.397201 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:38:07.410001 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:47:22.426607 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 05:56:37.441406 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:05:52.457654 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:15:07.472103 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:24:22.486074 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:33:37.501228 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:42:52.519273 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 06:52:07.531596 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:01:22.544045 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:10:37.558219 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:19:52.572032 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:29:07.584976 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:38:22.598818 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:47:37.612602 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 07:56:52.624866 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:06:07.639300 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:15:22.654236 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:24:37.671402 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:33:52.684686 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:43:07.704174 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 08:52:22.721868 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:01:37.734700 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:10:52.750773 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:20:07.765027 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:29:22.783933 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:38:37.800500 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:47:52.815671 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 09:57:07.829671 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 10:06:22.844138 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 10:15:37.855435 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 10:24:52.869340 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-12 10:34:07.881699 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 15:27:36.171840 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 15:34:27.183941 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 15:43:42.196021 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 15:52:57.207442 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:02:12.219486 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:11:27.231843 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:20:42.244143 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:29:57.256305 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:39:12.269897 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:48:27.282054 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 16:57:42.294527 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:06:57.306778 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:16:12.319232 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:25:27.331692 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:34:42.344164 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:43:57.356449 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 17:53:12.368992 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:02:27.383769 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:11:42.399533 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:20:57.411952 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:30:12.424684 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:39:27.440669 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:48:42.454263 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 18:57:57.466109 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:07:12.478608 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:16:27.490896 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:25:42.503545 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:34:57.516387 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:44:12.530420 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 19:53:27.550459 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:02:42.565000 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:11:57.577748 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:21:12.590444 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:30:27.608012 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:39:42.622522 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:48:57.635426 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 20:58:12.648458 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:07:27.660564 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:16:42.673173 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:25:57.685598 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:35:12.698638 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:44:27.716286 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 21:53:42.728645 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:02:57.740490 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:12:12.757138 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:21:27.774402 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:30:42.789531 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:39:57.802488 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:49:12.815084 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 22:58:27.826681 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:07:42.839841 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:16:57.854237 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:26:12.868221 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:35:27.881138 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:44:42.893310 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-13 23:53:57.905893 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:03:12.919323 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:12:27.931423 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:21:42.944787 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:30:57.959777 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:40:12.973463 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:49:27.985629 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 00:58:43.000222 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:07:58.013429 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:17:13.030906 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:26:28.042898 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:35:43.062072 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:44:58.073523 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 01:54:13.086209 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:03:28.098138 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:12:43.114901 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:21:58.134015 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:31:13.152926 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:40:28.166226 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:49:43.180054 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 02:58:58.196222 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:08:13.209851 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:17:28.228287 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:26:43.242531 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:35:58.259717 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:45:13.281457 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 03:54:28.299861 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:03:43.314104 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:12:58.328082 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:22:13.344483 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:31:28.362957 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:40:43.379419 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:49:58.399981 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 04:59:13.418067 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:08:28.430033 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:17:43.443542 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:26:58.459380 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:36:13.476186 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:45:28.492496 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 05:54:43.510447 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:03:58.526429 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:13:13.541401 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:22:28.557153 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:31:43.570368 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:40:58.586052 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:50:13.598126 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 06:59:28.610901 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:08:43.623851 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:17:58.638740 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:27:13.653335 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:36:28.671901 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:45:43.686186 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 07:54:58.700984 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:04:13.714722 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:13:28.733247 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:22:43.748040 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:31:58.775564 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:41:13.791376 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:50:28.810240 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 08:59:43.827653 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:08:58.845524 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:18:13.858605 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:27:28.874663 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:36:43.887830 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:45:58.912063 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 09:55:13.927052 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:04:28.939430 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:13:43.953677 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:22:58.968058 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:32:13.981624 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:41:29.001088 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:50:44.020726 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 10:59:59.039975 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 11:09:14.056327 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 11:18:29.068900 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 11:27:44.101191 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-14 11:36:59.122570 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:00:12.935328 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:07:03.948246 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:16:18.961408 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:25:33.974544 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:34:48.987528 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:44:04.000557 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 00:53:19.014066 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:02:34.029421 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:11:49.042623 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:21:04.055865 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:30:19.069293 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:39:34.084178 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:48:49.096903 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 01:58:04.110429 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:07:19.122401 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:16:34.135003 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:25:49.150142 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:35:04.163300 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:44:19.176295 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 02:53:34.189760 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:02:49.202296 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:12:04.215593 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:21:19.229049 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:30:34.242211 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:39:49.255302 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:49:04.267597 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 03:58:19.280839 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:07:34.293996 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:16:49.307582 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:26:04.320803 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:35:19.334799 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:44:34.349649 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 04:53:49.363023 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:03:04.376192 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:12:19.389731 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:21:34.402952 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:30:49.416465 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:40:04.428520 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:49:19.441610 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 05:58:34.456182 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:07:49.475559 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:17:04.490716 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:26:19.506623 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:35:34.522812 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:44:49.541590 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 06:54:04.563006 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:03:19.580265 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:12:34.595936 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:21:49.612497 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:31:04.626583 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:40:19.638904 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:49:34.652000 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 07:58:49.665770 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:08:04.680308 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:17:19.693080 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:26:34.707593 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:35:49.720215 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:45:04.738212 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 08:54:19.756168 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:03:34.773045 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:12:49.786808 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:22:04.799776 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:31:19.814378 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:40:34.827153 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:49:49.844418 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 09:59:04.857787 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:08:19.875953 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:17:34.890086 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:26:49.906602 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:36:04.921947 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:45:19.937377 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 10:54:34.952839 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:03:49.973755 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:13:04.987843 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:22:20.000259 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:31:35.013601 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:40:50.034655 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:50:05.054578 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 11:59:20.068575 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:08:35.080229 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:17:50.093429 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:27:05.106143 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:36:20.120003 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:45:35.132971 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 12:54:50.148403 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:04:05.164045 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:13:20.180898 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:22:35.193985 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:31:50.208949 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:41:05.224632 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:50:20.240567 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 13:59:35.262885 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:08:50.279543 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:18:05.292854 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:27:20.313359 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:36:35.328578 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:45:50.345908 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 14:55:05.368224 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:04:20.381852 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:13:35.399770 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:22:50.414190 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:32:05.430212 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:41:20.443530 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:50:35.462067 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 15:59:50.476173 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:09:05.489256 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:18:20.507171 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:27:35.526384 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:36:50.540159 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:46:05.554487 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 16:55:20.568796 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:04:35.583949 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:13:50.600717 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:23:05.620654 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:32:20.633027 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:41:35.646689 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 17:50:50.664532 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:00:05.681123 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:09:20.698566 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:18:35.713364 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:27:50.741902 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:37:05.757187 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:46:20.777538 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 18:55:35.793271 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:04:50.811529 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:14:05.830722 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:23:20.852407 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:32:35.869582 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:41:50.883110 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 19:51:05.900499 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:00:20.917390 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:09:35.941897 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:18:50.959412 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:28:05.975176 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:37:20.997660 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:46:36.014725 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 20:55:51.028215 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:05:06.042535 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:14:21.058036 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:23:36.074654 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:32:51.090096 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:42:06.105678 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 21:51:21.120175 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:00:36.135423 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:09:51.150112 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:19:06.169745 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:28:21.183037 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:37:36.197931 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:46:51.214926 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 22:56:06.231802 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:05:21.248257 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:14:36.262131 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:23:51.275916 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:33:06.300381 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:42:21.313638 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-15 23:51:36.330029 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:00:51.347525 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:10:06.364963 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:19:21.379334 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:28:36.399057 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:37:51.418275 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:47:06.435035 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 00:56:21.459967 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:05:36.477604 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:14:51.494930 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:24:06.519831 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:33:21.542811 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:42:36.559676 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 01:51:51.583790 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:01:06.605553 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:10:21.624104 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:19:36.639243 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:28:51.655181 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:38:06.668079 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:47:21.685364 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 02:56:36.702320 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:05:51.720060 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:15:06.735450 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:24:21.758692 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:33:36.781839 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:42:51.799359 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 03:52:06.813843 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:01:21.832619 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:10:36.845564 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:19:51.867000 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:29:06.882201 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:38:21.905384 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:47:36.922928 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 04:56:51.942285 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:06:06.964976 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:15:21.991021 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:24:37.008401 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:33:52.030727 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:43:07.052705 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 05:52:22.070892 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:01:37.092166 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:10:52.111501 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:20:07.126516 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:29:22.150656 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:38:37.171955 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:47:52.192949 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 06:57:07.214669 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:06:22.241236 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:15:37.259123 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:24:52.280156 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:34:07.305926 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:43:22.324366 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 07:52:37.346187 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:01:52.371369 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:11:07.397390 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:20:22.419188 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:29:37.447069 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:38:52.462163 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:48:07.489087 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 08:57:22.505178 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:06:37.523041 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:15:52.541460 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:25:07.569400 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:34:22.590738 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:43:37.615843 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 09:52:52.635744 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:02:07.658466 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:11:22.688234 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:20:37.710451 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:29:52.733939 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:39:07.755836 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:48:22.777569 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 10:57:37.794934 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:06:52.818971 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:16:07.840458 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:25:22.883131 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:34:37.900366 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:43:52.927062 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 11:53:07.945507 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 12:02:22.968893 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 12:11:37.995260 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 12:20:53.024617 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 12:30:08.051538 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 16:59:30.074419 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 17:03:05.767395 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 17:04:35.264604 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-16 17:14:15.626832 - Modem restart triggered: Sender: prolonged internet failure
+2026-03-23 19:00:19.699675 - Buffered: TS=2026-03-23 19:00:19.689340 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.67)
+2026-03-23 19:00:29.200722 - Buffered: TS=2026-03-23 19:00:29.193903 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2269.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:01:29.410692 - Buffered: TS=2026-03-23 19:01:29.400964 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2271.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:02:29.651381 - Buffered: TS=2026-03-23 19:02:29.641165 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2269.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 19:03:29.899422 - Buffered: TS=2026-03-23 19:03:29.892606 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2267.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:04:30.093624 - Buffered: TS=2026-03-23 19:04:30.086922 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2267.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 19:05:30.333102 - Buffered: TS=2026-03-23 19:05:30.322797 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2269.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:06:30.566283 - Buffered: TS=2026-03-23 19:06:30.556013 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2267.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:07:30.095862 - Buffered: TS=2026-03-23 19:07:30.089197 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.65)
+2026-03-23 19:07:30.784903 - Buffered: TS=2026-03-23 19:07:30.776313 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2269.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:08:31.017417 - Buffered: TS=2026-03-23 19:08:31.010548 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2268.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:08:32.898466 - Buffered: TS=2026-03-23 19:08:32.887641 | c1@Kerela@N4(moisture1:nan)(voltage1:3.72)(vols1:2113.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:09:31.252851 - Buffered: TS=2026-03-23 19:09:31.245762 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:10:31.500146 - Buffered: TS=2026-03-23 19:10:31.489018 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2265.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:11:31.728560 - Buffered: TS=2026-03-23 19:11:31.721640 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2267.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:12:31.942274 - Buffered: TS=2026-03-23 19:12:31.935381 | c1@Kerala@N2(moisture1:nan)(voltage1:3.99)(vols1:2267.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:13:32.287232 - Buffered: TS=2026-03-23 19:13:32.274805 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 19:14:32.404693 - Buffered: TS=2026-03-23 19:14:32.397856 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2266.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:15:32.620225 - Buffered: TS=2026-03-23 19:15:32.613384 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2266.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:16:32.861014 - Buffered: TS=2026-03-23 19:16:32.854341 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:17:33.102087 - Buffered: TS=2026-03-23 19:17:33.093584 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 19:18:33.340449 - Buffered: TS=2026-03-23 19:18:33.328835 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2262.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:19:28.656451 - Buffered: TS=2026-03-23 19:19:28.648789 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2159.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.65)
+2026-03-23 19:19:33.568589 - Buffered: TS=2026-03-23 19:19:33.556507 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2261.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:20:33.912749 - Buffered: TS=2026-03-23 19:20:33.901324 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:21:34.019469 - Buffered: TS=2026-03-23 19:21:34.011558 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2258.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:22:34.242825 - Buffered: TS=2026-03-23 19:22:34.234800 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2263.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:22:35.658137 - Buffered: TS=2026-03-23 19:22:35.649950 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 19:23:34.527293 - Buffered: TS=2026-03-23 19:23:34.515141 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2259.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:24:34.717438 - Buffered: TS=2026-03-23 19:24:34.705386 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2261.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 19:25:22.462149 - Buffered: TS=2026-03-23 19:25:22.449964 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.65)
+2026-03-23 19:25:34.946388 - Buffered: TS=2026-03-23 19:25:34.934739 | c1@Kerala@N2(moisture1:nan)(voltage1:3.98)(vols1:2261.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.14)
+2026-03-23 19:26:26.619811 - Buffered: TS=2026-03-23 19:26:26.607650 | c1@Kerela@N4(moisture1:nan)(voltage1:3.72)(vols1:2115.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:26:35.162535 - Buffered: TS=2026-03-23 19:26:35.150958 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2258.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:27:35.411508 - Buffered: TS=2026-03-23 19:27:35.400123 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:28:35.634383 - Buffered: TS=2026-03-23 19:28:35.626370 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2259.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:29:35.856892 - Buffered: TS=2026-03-23 19:29:35.848795 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2259.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:30:36.094011 - Buffered: TS=2026-03-23 19:30:36.081871 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2258.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 19:31:36.317161 - Buffered: TS=2026-03-23 19:31:36.309221 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:32:23.299606 - Buffered: TS=2026-03-23 19:32:23.291649 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.65)
+2026-03-23 19:32:27.879044 - Buffered: TS=2026-03-23 19:32:27.865911 | c1@Kerela@N4(moisture1:nan)(voltage1:3.72)(vols1:2115.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:32:36.553801 - Buffered: TS=2026-03-23 19:32:36.541354 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2259.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:33:36.787554 - Buffered: TS=2026-03-23 19:33:36.779612 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2258.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:33:41.434365 - Buffered: TS=2026-03-23 19:33:41.422259 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2159.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 19:34:37.014665 - Buffered: TS=2026-03-23 19:34:37.002865 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 19:35:37.272794 - Buffered: TS=2026-03-23 19:35:37.259430 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.14)
+2026-03-23 19:35:41.268233 - Buffered: TS=2026-03-23 19:35:41.256575 | c1@Kerela@N4(moisture1:nan)(voltage1:3.72)(vols1:2117.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 19:36:37.488031 - Buffered: TS=2026-03-23 19:36:37.480289 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:37:37.720388 - Buffered: TS=2026-03-23 19:37:37.712546 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:38:37.959671 - Buffered: TS=2026-03-23 19:38:37.948984 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:39:38.185939 - Buffered: TS=2026-03-23 19:39:38.178005 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:40:38.526277 - Buffered: TS=2026-03-23 19:40:38.518299 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:41:38.655477 - Buffered: TS=2026-03-23 19:41:38.643526 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:41:43.477153 - Buffered: TS=2026-03-23 19:41:43.469053 | c1@Kerela@N4(moisture1:nan)(voltage1:3.72)(vols1:2117.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:42:33.780096 - Buffered: TS=2026-03-23 19:42:33.772486 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 19:42:38.883815 - Buffered: TS=2026-03-23 19:42:38.871849 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:43:39.130129 - Buffered: TS=2026-03-23 19:43:39.118011 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:44:39.349596 - Buffered: TS=2026-03-23 19:44:39.338244 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:45:39.593608 - Buffered: TS=2026-03-23 19:45:39.581667 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2256.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:46:39.812432 - Buffered: TS=2026-03-23 19:46:39.804763 | c1@Kerala@N2(moisture1:nan)(voltage1:3.97)(vols1:2257.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:47:40.152652 - Buffered: TS=2026-03-23 19:47:40.140024 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2255.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:48:40.279071 - Buffered: TS=2026-03-23 19:48:40.271270 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2254.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:49:40.518416 - Buffered: TS=2026-03-23 19:49:40.506511 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2254.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:50:40.759389 - Buffered: TS=2026-03-23 19:50:40.751756 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2255.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:51:40.984047 - Buffered: TS=2026-03-23 19:51:40.976296 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2255.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.15)
+2026-03-23 19:52:41.216002 - Buffered: TS=2026-03-23 19:52:41.204264 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2253.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:53:41.450762 - Buffered: TS=2026-03-23 19:53:41.442894 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2253.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:54:41.813051 - Buffered: TS=2026-03-23 19:54:41.796022 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2253.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 19:55:41.930145 - Buffered: TS=2026-03-23 19:55:41.918015 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2253.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 19:56:42.157301 - Buffered: TS=2026-03-23 19:56:42.146512 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2255.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 19:57:42.389288 - Buffered: TS=2026-03-23 19:57:42.377512 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2251.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.08)
+2026-03-23 19:58:42.620431 - Buffered: TS=2026-03-23 19:58:42.612770 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2253.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 19:59:42.856707 - Buffered: TS=2026-03-23 19:59:42.849012 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2251.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:00:43.101020 - Buffered: TS=2026-03-23 20:00:43.089559 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2250.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:01:43.436961 - Buffered: TS=2026-03-23 20:01:43.424574 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2249.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:02:43.577128 - Buffered: TS=2026-03-23 20:02:43.565032 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2251.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:03:39.514819 - Buffered: TS=2026-03-23 20:03:39.506868 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 20:03:43.812157 - Buffered: TS=2026-03-23 20:03:43.804138 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2251.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:04:44.046794 - Buffered: TS=2026-03-23 20:04:44.037437 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2250.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:05:44.284228 - Buffered: TS=2026-03-23 20:05:44.276525 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2250.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:06:44.540284 - Buffered: TS=2026-03-23 20:06:44.527929 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2250.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:07:44.891340 - Buffered: TS=2026-03-23 20:07:44.880067 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2250.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 20:08:45.125788 - Buffered: TS=2026-03-23 20:08:45.114699 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2247.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:09:45.253068 - Buffered: TS=2026-03-23 20:09:45.240817 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2247.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 20:09:48.401719 - Buffered: TS=2026-03-23 20:09:48.393732 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 20:10:45.483259 - Buffered: TS=2026-03-23 20:10:45.471030 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2247.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:11:45.719904 - Buffered: TS=2026-03-23 20:11:45.712154 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2247.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:12:45.955154 - Buffered: TS=2026-03-23 20:12:45.944285 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2246.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:13:46.192135 - Buffered: TS=2026-03-23 20:13:46.180536 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2242.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:14:46.425364 - Buffered: TS=2026-03-23 20:14:46.413805 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2249.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:15:46.852783 - Buffered: TS=2026-03-23 20:15:46.845076 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:16:47.107979 - Buffered: TS=2026-03-23 20:16:47.096419 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:17:47.342515 - Buffered: TS=2026-03-23 20:17:47.334583 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2245.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.09)
+2026-03-23 20:18:47.719999 - Buffered: TS=2026-03-23 20:18:47.707934 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2242.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:19:40.872994 - Buffered: TS=2026-03-23 20:19:40.864950 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.62)
+2026-03-23 20:19:47.953211 - Buffered: TS=2026-03-23 20:19:47.945232 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2245.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.12)
+2026-03-23 20:20:48.184622 - Buffered: TS=2026-03-23 20:20:48.172418 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:21:48.630289 - Buffered: TS=2026-03-23 20:21:48.619500 | c1@Kerala@N2(moisture1:nan)(voltage1:3.95)(vols1:2245.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:22:49.056748 - Buffered: TS=2026-03-23 20:22:49.048868 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2242.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:23:49.509096 - Buffered: TS=2026-03-23 20:23:49.501258 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:24:50.052398 - Buffered: TS=2026-03-23 20:24:50.040398 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:25:50.307407 - Buffered: TS=2026-03-23 20:25:50.299619 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2241.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 20:26:51.428224 - Buffered: TS=2026-03-23 20:26:51.416331 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2242.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.13)
+2026-03-23 20:27:54.138274 - Buffered: TS=2026-03-23 20:27:54.125310 | c1@Kerala@N2(moisture1:nan)(voltage1:3.96)(vols1:2255.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.11)
+2026-03-23 20:28:55.742561 - Buffered: TS=2026-03-23 20:28:55.734729 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2242.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:29:56.397870 - Buffered: TS=2026-03-23 20:29:56.385896 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2243.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:31:03.523348 - Buffered: TS=2026-03-23 20:31:03.515536 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2241.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.10)
+2026-03-23 20:31:05.849663 - Buffered: TS=2026-03-23 20:31:05.837739 | c1@Kerala@N7(moisture1:nan)(voltage1:3.80)(vols1:2160.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.61)
+2026-03-23 20:35:19.830193 - Buffered: TS=2026-03-23 20:35:19.822368 | c1@Kerala@N2(moisture1:nan)(voltage1:3.94)(vols1:2239.00)(pitch1:-95)(roll1:-95)(pitch2:-95)(roll2:-95)(pitch3:-95)(roll3:-95)(pitch4:-95)(roll4:-95)(pressure1:0.05)

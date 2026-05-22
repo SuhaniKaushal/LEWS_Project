@@ -1,0 +1,817 @@
+/**
+ * LEWS Animations and Transitions
+ * Modern animations for enhanced user experience
+ * Version: 1.0.0
+ */
+
+/* ========================================================================
+   CSS CUSTOM PROPERTIES
+   ======================================================================== */
+
+:root {
+    /* Animation Durations */
+    --anim-fast: 150ms;
+    --anim-base: 250ms;
+    --anim-slow: 350ms;
+    --anim-slower: 500ms;
+
+    /* Easing Functions */
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========================================================================
+   GLOBAL SMOOTH SCROLL
+   ======================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================================================
+   PAGE TRANSITIONS
+   ======================================================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--anim-slow) var(--ease-out);
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp var(--anim-slow) var(--ease-out);
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-down {
+    animation: slideDown var(--anim-slow) var(--ease-out);
+}
+
+/* Slide In from Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft var(--anim-slow) var(--ease-out);
+}
+
+/* Slide In from Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight var(--anim-slow) var(--ease-out);
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+    animation: scaleIn var(--anim-base) var(--ease-out);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ========================================================================
+   BUTTON ANIMATIONS
+   ======================================================================== */
+
+/* Button Scale on Hover */
+.btn-scale-hover {
+    transition: transform var(--anim-base) var(--ease-out), box-shadow var(--anim-base) var(--ease-out);
+}
+
+.btn-scale-hover:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.btn-scale-hover:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Button Ripple Effect */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.btn-ripple:active::after {
+    animation: ripple 0.6s var(--ease-out);
+}
+
+/* Button Pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.btn-pulse {
+    animation: pulse 2s var(--ease-in-out) infinite;
+}
+
+/* ========================================================================
+   CARD ANIMATIONS
+   ======================================================================== */
+
+/* Card Lift Effect */
+.card-lift {
+    transition: transform var(--anim-base) var(--ease-out), box-shadow var(--anim-base) var(--ease-out);
+}
+
+.card-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Tilt Effect */
+.card-tilt {
+    transition: transform var(--anim-base) var(--ease-smooth);
+}
+
+.card-tilt:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg);
+}
+
+/* Card Glow Effect */
+@keyframes cardGlow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255, 107, 53, 0.4);
+    }
+}
+
+.card-glow {
+    animation: cardGlow 2s var(--ease-in-out) infinite;
+}
+
+/* Card Flip */
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    transition: transform var(--anim-slower) var(--ease-smooth);
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+    backface-visibility: hidden;
+}
+
+.card-flip-back {
+    transform: rotateY(180deg);
+}
+
+/* ========================================================================
+   ALERT ANIMATIONS
+   ======================================================================== */
+
+/* Alert Slide In */
+@keyframes alertSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.alert-slide-in {
+    animation: alertSlideIn var(--anim-base) var(--ease-out);
+}
+
+/* Alert Pulse for Critical Notifications */
+@keyframes alertPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+}
+
+.alert-pulse {
+    animation: alertPulse 2s var(--ease-in-out) infinite;
+}
+
+/* Alert Shake */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.alert-shake {
+    animation: shake 0.5s var(--ease-in-out);
+}
+
+/* ========================================================================
+   LOADING ANIMATIONS
+   ======================================================================== */
+
+/* Spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 107, 53, 0.2);
+    border-top-color: #ff6b35;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner-sm {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
+.spinner-lg {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+}
+
+/* Dots Loader */
+@keyframes dotPulse {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.dots-loader {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-loader span {
+    width: 12px;
+    height: 12px;
+    background: #ff6b35;
+    border-radius: 50%;
+    animation: dotPulse 1.4s ease-in-out infinite;
+}
+
+.dots-loader span:nth-child(1) { animation-delay: 0s; }
+.dots-loader span:nth-child(2) { animation-delay: 0.2s; }
+.dots-loader span:nth-child(3) { animation-delay: 0.4s; }
+
+/* Progress Bar Animation */
+@keyframes progressBar {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar-animated {
+    animation: progressBar 1.5s var(--ease-out) forwards;
+}
+
+/* Skeleton Loading */
+@keyframes skeleton {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0px,
+        #e0e0e0 40px,
+        #f0f0f0 80px
+    );
+    background-size: 200px 100%;
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+
+.skeleton-text {
+    height: 16px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-heading {
+    height: 24px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.skeleton-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* ========================================================================
+   TOOLTIP ANIMATIONS
+   ======================================================================== */
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.tooltip {
+    animation: tooltipFadeIn var(--anim-fast) var(--ease-out);
+}
+
+/* ========================================================================
+   MODAL ANIMATIONS
+   ======================================================================== */
+
+@keyframes modalBackdropFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.modal-backdrop-fade {
+    animation: modalBackdropFadeIn var(--anim-base) var(--ease-out);
+}
+
+.modal-slide-down {
+    animation: modalSlideDown var(--anim-slow) var(--ease-bounce);
+}
+
+/* ========================================================================
+   DROPDOWN ANIMATIONS
+   ======================================================================== */
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    animation: dropdownSlide var(--anim-fast) var(--ease-out);
+}
+
+/* ========================================================================
+   ACCORDION ANIMATIONS
+   ======================================================================== */
+
+.accordion-collapse {
+    transition: height var(--anim-base) var(--ease-smooth);
+}
+
+/* ========================================================================
+   TAB ANIMATIONS
+   ======================================================================== */
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-pane {
+    animation: tabFadeIn var(--anim-base) var(--ease-out);
+}
+
+/* ========================================================================
+   MICROINTERACTIONS
+   ======================================================================== */
+
+/* Success Checkmark */
+@keyframes checkmark {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke: #27ae60;
+    fill: none;
+    animation: checkmark 0.6s var(--ease-out) forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: checkmark 0.3s 0.3s var(--ease-out) forwards;
+}
+
+/* Error Shake */
+.error-shake {
+    animation: shake 0.5s var(--ease-in-out);
+}
+
+/* Copy Success Flash */
+@keyframes copyFlash {
+    0%, 100% { background: transparent; }
+    50% { background: rgba(39, 174, 96, 0.2); }
+}
+
+.copy-flash {
+    animation: copyFlash 0.5s var(--ease-in-out);
+}
+
+/* Toggle Switch Animation */
+.toggle-switch {
+    transition: all var(--anim-base) var(--ease-smooth);
+}
+
+.toggle-switch-slider {
+    transition: transform var(--anim-base) var(--ease-smooth);
+}
+
+.toggle-switch input:checked + .toggle-switch-slider {
+    transform: translateX(20px);
+}
+
+/* Number Counter Animation */
+@keyframes countUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.count-up {
+    animation: countUp var(--anim-base) var(--ease-out);
+}
+
+/* ========================================================================
+   PARALLAX EFFECT
+   ======================================================================== */
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-slow {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+/* ========================================================================
+   SCROLL ANIMATIONS
+   ======================================================================== */
+
+/* Fade in on scroll */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--anim-slow) var(--ease-out), transform var(--anim-slow) var(--ease-out);
+}
+
+.scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scale in on scroll */
+.scroll-scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity var(--anim-slow) var(--ease-out), transform var(--anim-slow) var(--ease-out);
+}
+
+.scroll-scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ========================================================================
+   HOVER EFFECTS
+   ======================================================================== */
+
+/* Glow on Hover */
+.hover-glow {
+    transition: box-shadow var(--anim-base) var(--ease-out);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Lift and Shadow */
+.hover-lift {
+    transition: transform var(--anim-base) var(--ease-out), box-shadow var(--anim-base) var(--ease-out);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Underline Expand */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width var(--anim-base) var(--ease-out);
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Icon Bounce */
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hover-icon-bounce:hover i,
+.hover-icon-bounce:hover svg {
+    animation: iconBounce 0.5s var(--ease-in-out);
+}
+
+/* ========================================================================
+   FOCUS ANIMATIONS
+   ======================================================================== */
+
+/* Focus Ring */
+.focus-ring {
+    transition: box-shadow var(--anim-fast) var(--ease-out);
+}
+
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+}
+
+/* ========================================================================
+   BADGE ANIMATIONS
+   ======================================================================== */
+
+@keyframes badgePop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.badge-pop {
+    animation: badgePop var(--anim-base) var(--ease-bounce);
+}
+
+/* ========================================================================
+   NOTIFICATION ANIMATIONS
+   ======================================================================== */
+
+@keyframes notificationSlideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes notificationSlideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.notification-slide-in {
+    animation: notificationSlideIn var(--anim-base) var(--ease-out);
+}
+
+.notification-slide-out {
+    animation: notificationSlideOut var(--anim-base) var(--ease-in);
+}
+
+/* ========================================================================
+   UTILITY CLASSES
+   ======================================================================== */
+
+/* Animation States */
+.animate-pause {
+    animation-play-state: paused !important;
+}
+
+.animate-play {
+    animation-play-state: running !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================================================
+   CHART ANIMATIONS
+   ======================================================================== */
+
+@keyframes chartLineGrow {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.chart-line-animate {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: chartLineGrow 1.5s var(--ease-out) forwards;
+}
+
+@keyframes chartBarGrow {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.chart-bar-animate {
+    transform-origin: bottom;
+    animation: chartBarGrow 0.8s var(--ease-out) forwards;
+}

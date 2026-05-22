@@ -1,0 +1,83 @@
+<html><head>
+<style type="text/css">
+#id3, #id4
+{
+   font-size: 20px;
+   margin-top:5px;
+   margin-bottom: 5px;
+}
+p
+{
+  color:#224422;
+  font-size:15px
+}
+#temp
+{
+  position:relative;
+  margin-top:800px;
+  margin-left:500px;
+}
+
+#comp {
+        position:absolute;
+        height: 500px;
+        overflow-y: scroll;
+        width:175px;
+        border: 3px solid #222221;
+        margin-left:10px;
+        padding: 10px 10px 10px 10px;
+        margin-top:10px;
+      }
+
+
+      img
+      {
+        position: fixed;
+		bottom: 100;
+		right: 50;
+		width: 1500px;
+  border: 3px solid #111121;
+      }
+</style>
+</head>
+<body bgcolor='#FAFAFF'>
+{% block content %}
+<div>
+
+  <a href=allow.html>Allow Users</a> </br>
+  <a href=check.html>Check Activity</a> </br>
+  <a href=change.html>Change Status</a> </br>
+     {% csrf_token %}
+
+
+ <div id='main_div'>
+     {% autoescape off %}
+	 	<img width=700 height=700 id='img' src={{image_path}}>
+	 {% endautoescape %}
+
+ </form>
+	<div id='comp'>
+	<form action='fetch_info' method='post'>
+	<input type='hidden' value='browser' name='val'>
+    <p id='id3'>Sensor Type</p>
+    <div id='id1'>
+    {% autoescape off %}
+		 	 	{{sensor}}
+	{% endautoescape %}
+
+    </div>
+
+    <p id='id4'>Location<p>
+    <div id='id2'>
+    {% autoescape off %}
+			 	 	{{location}}
+	{% endautoescape %}
+    </div></br>
+    <input type=submit value="CLICK">
+    </form>
+  </div>
+ </div>
+ </br><br>
+{% endblock %}
+
+</html></body>

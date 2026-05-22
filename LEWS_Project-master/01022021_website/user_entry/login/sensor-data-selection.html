@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Configure Data View - LEWS</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile-nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sensor-selection-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    {% include 'navbar-include.html' %}
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Animated Background -->
+        <div class="selection-background">
+            <div class="bg-pattern"></div>
+        </div>
+
+    <!-- Progress Indicator -->
+    <div class="container mt-4">
+        <div class="progress-steps">
+            <div class="step completed">
+                <div class="step-label">Login</div>
+            </div>
+            <div class="step completed">
+                <div class="step-label">Select Filters</div>
+            </div>
+            <div class="step active">
+                <div class="step-label">Configure View</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Selection Container -->
+    <div class="container selection-container">
+        <div class="selection-card">
+            <form method="post" action="add" id="dataConfigForm">
+                {% csrf_token %}
+                <input type="hidden" value="{{ hidden_value }}" name="tt">
+
+                <!-- Sensor ID Selection -->
+                <div class="selection-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-microchip me-2"></i>
+                            Select Specific Sensors
+                        </h2>
+                        <p class="section-description">Choose the specific sensor IDs you want to visualize</p>
+                    </div>
+
+                    <div class="checkbox-grid">
+                        {% autoescape off %}
+                        {{ sensor_id }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+
+                <!-- Date and Time Range -->
+                <div class="selection-section mt-5">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            Date & Time Range
+                        </h2>
+                        <p class="section-description">Specify the time period for data visualization</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- From Date/Time -->
+                        <div class="col-md-6">
+                            <div class="time-range-card">
+                                <h3 class="time-range-label">
+                                    <i class="fas fa-play-circle me-2"></i>From
+                                </h3>
+                                <div class="form-group mb-3">
+                                    <label for="from_date" class="form-label">Date</label>
+                                    <input type="date" id="from_date" name="from_date" class="form-control" required>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <label for="from_hr" class="form-label">Hour</label>
+                                        <select name="from_hr" id="from_hr" class="form-select">
+                                            <option value="0">00</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="from_min" class="form-label">Minute</label>
+                                        <select name="from_min" id="from_min" class="form-select">
+                                            <option value="0">00</option>
+                                            <option value="15">15</option>
+                                            <option value="30">30</option>
+                                            <option value="45">45</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- To Date/Time -->
+                        <div class="col-md-6">
+                            <div class="time-range-card">
+                                <h3 class="time-range-label">
+                                    <i class="fas fa-stop-circle me-2"></i>To
+                                </h3>
+                                <div class="form-group mb-3">
+                                    <label for="to_date" class="form-label">Date</label>
+                                    <input type="date" id="to_date" name="to_date" class="form-control" required>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <label for="to_hr" class="form-label">Hour</label>
+                                        <select name="to_hr" id="to_hr" class="form-select">
+                                            <option value="0">00</option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="to_min" class="form-label">Minute</label>
+                                        <select name="to_min" id="to_min" class="form-select">
+                                            <option value="0">00</option>
+                                            <option value="15">15</option>
+                                            <option value="30">30</option>
+                                            <option value="45">45</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Options -->
+                <div class="selection-section mt-5">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-cog me-2"></i>
+                            Visualization Options
+                        </h2>
+                        <p class="section-description">Configure how you want to view the data</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Chart Type -->
+                        <div class="col-md-4">
+                            <label for="chart_type" class="form-label">
+                                <i class="fas fa-chart-bar me-2"></i>Chart Type
+                            </label>
+                            <select name="chart_type" id="chart_type" class="form-select">
+                                <option value="timeseries">Time Series</option>
+                                <option value="bar">Bar Chart</option>
+                            </select>
+                        </div>
+
+                        <!-- Duration -->
+                        <div class="col-md-4">
+                            <label for="duration" class="form-label">
+                                <i class="fas fa-clock me-2"></i>Data Interval
+                            </label>
+                            <select name="duration" id="duration" class="form-select">
+                                <option value="8760">Year Wise</option>
+                                <option value="720">Month Wise</option>
+                                <option value="168">Week Wise</option>
+                                <option value="24">Day Wise</option>
+                                <option value="1">Hour Wise</option>
+                                <option value="2">2 Hours</option>
+                                <option value="15">15 Hours</option>
+                                <option value="30">30 Hours</option>
+                                <option value="90">90 Hours</option>
+                                <option value="120">120 Hours</option>
+                                <option value="150">150 Hours</option>
+                                <option value="200">200 Hours</option>
+                            </select>
+                        </div>
+
+                        <!-- Query Type -->
+                        <div class="col-md-4">
+                            <label for="query_type" class="form-label">
+                                <i class="fas fa-eye me-2"></i>Action
+                            </label>
+                            <select name="query_type" id="query_type" class="form-select">
+                                <option value="1">View Data</option>
+                                <option value="0">Download Data</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" name="download" style="display: none;">
+                </div>
+
+                <!-- Selection Summary -->
+                <div class="selection-summary">
+                    <div class="summary-content">
+                        <i class="fas fa-info-circle summary-icon"></i>
+                        <span class="summary-text">
+                            <strong id="selected-sensor-count">0</strong> sensor(s) selected for visualization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-action btn-primary">
+                        <i class="fas fa-chart-line me-2"></i>Generate Visualization
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    {% include 'footer-include.html' %}
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Navigation JS -->
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Set default dates (today)
+            const today = new Date().toISOString().split('T')[0];
+            $('#from_date').val(today);
+            $('#to_date').val(today);
+
+            // Update selection count
+            function updateSelectionCount() {
+                const sensorCount = $('input[name="sensor_list_id"]:checked').length;
+                $('#selected-sensor-count').text(sensorCount);
+            }
+
+            // Update count when checkboxes change
+            $('input[name="sensor_list_id"]').on('change', updateSelectionCount);
+
+            // Form validation
+            $('#dataConfigForm').on('submit', function(e) {
+                const sensorSelected = $('input[name="sensor_list_id"]:checked').length > 0;
+
+                if (!sensorSelected) {
+                    e.preventDefault();
+                    alert('Please select at least one sensor to visualize data.');
+                    return false;
+                }
+
+                const fromDate = $('#from_date').val();
+                const toDate = $('#to_date').val();
+
+                if (!fromDate || !toDate) {
+                    e.preventDefault();
+                    alert('Please select both From and To dates.');
+                    return false;
+                }
+
+                if (new Date(toDate) < new Date(fromDate)) {
+                    e.preventDefault();
+                    alert('To date must be greater than or equal to From date.');
+                    return false;
+                }
+
+                return true;
+            });
+
+            // Initialize count
+            updateSelectionCount();
+
+            // Add animation on list item click
+            $('.list-group-item').on('click', function() {
+                $(this).addClass('card-clicked');
+                setTimeout(() => {
+                    $(this).removeClass('card-clicked');
+                }, 300);
+            });
+        });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

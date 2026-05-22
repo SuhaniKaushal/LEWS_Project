@@ -1,0 +1,185 @@
+# ===========================
+# Python
+# ===========================
+
+# Byte-compiled / optimized / DLL files
+user_entry/login/__pycache__/
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+virtualenv/
+
+# ===========================
+# Django
+# ===========================
+
+# Database
+*.sqlite3
+*.db
+db.sqlite3
+
+# Migrations (optional - uncomment if you want to ignore migrations)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Django static files (collected)
+staticfiles/
+static_root/
+
+# Media files (user uploads)
+media/
+
+# ===========================
+# IDE and Editors
+# ===========================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[op]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# ===========================
+# Operating Systems
+# ===========================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ===========================
+# Jupyter Notebooks
+# ===========================
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===========================
+# Environment Variables
+# ===========================
+
+.env
+.env.local
+.env.*.local
+*.env
+
+# ===========================
+# Logs and Temporary Files
+# ===========================
+
+*.log
+logs/
+*.tmp
+*.bak
+tmp/
+temp/
+
+# ===========================
+# Data Files
+# ===========================
+
+# CSV and Excel files (data exports)
+*.csv
+*.xlsx
+*.xls
+data_log*.csv
+
+# Text logs
+LOG.txt
+Check.txt
+All.txt
+
+# ===========================
+# Archives and Backups
+# ===========================
+
+*.rar
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.backup
+
+# ===========================
+# Build and Distribution
+# ===========================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===========================
+# Testing and Coverage
+# ===========================
+
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.hypothesis/
+
+# ===========================
+# Project Specific
+# ===========================
+
+# Generated images (matplotlib plots)
+*.png
+!static/**/*.png
+!images/**/*.png
+
+# APK files (mobile apps)
+*.apk
+
+# Requirements variations (keep only one canonical version)
+requirements_*.txt
+!requirements.txt
+!requirements_clean.txt
+
+# ===========================
+# Additional Required Ignores
+# ===========================
+temp_pg/
+node_modules/
+.cache/

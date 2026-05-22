@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Select Sensors - LEWS Dashboard</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mobile-nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sensor-selection-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    {% include 'navbar-include.html' %}
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Animated Background -->
+        <div class="selection-background">
+            <div class="bg-pattern"></div>
+        </div>
+
+    <!-- Page Heading -->
+    <div class="container mt-5">
+        <div class="page-title-section">
+            <span class="decor-line"></span>
+            <span class="decor-dot"></span>
+            <h1 class="page-title">Node and Sensor Selection</h1>
+            <span class="decor-dot"></span>
+            <span class="decor-line"></span>
+        </div>
+    </div>
+
+    <!-- Main Selection Container -->
+    <div class="container selection-container">
+        <div class="selection-card">
+            <form method="post" action="fetch_info" id="sensorSelectionForm">
+                {% csrf_token %}
+                <input type="hidden" value="browser" name="val">
+
+                <!-- Sensor Type Selection -->
+                <div class="selection-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-microchip me-2"></i>
+                            Sensor Types
+                        </h2>
+                        <p class="section-description">Select the types of sensors you want to monitor</p>
+                    </div>
+
+                    <div class="checkbox-grid">
+                        {% autoescape off %}
+                        {{ sensor }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+
+                <!-- Monitoring Locations Overview -->
+                <div class="selection-section mt-5">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-map me-2" style="color: var(--sel-accent-500);"></i>
+                            Monitoring Locations Overview
+                        </h2>
+                        <p class="section-description">Select the types of sensors you want to monitor</p>
+                    </div>
+
+                    <div class="terrain-map-container">
+                        <img src="{% static 'images/terrain_map.png' %}" alt="Terrain Map" class="terrain-map-image">
+                        
+                        <!-- Interactive Pins -->
+                        <div class="map-pin" style="left: 21%; top: 36%;" data-node="kerela_n9" title="KERALA@N9">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N9</span>
+                        </div>
+                        <div class="map-pin" style="left: 22%; top: 44%;" data-node="kerela_n7" title="KERALA@N7">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N7</span>
+                        </div>
+                        <div class="map-pin" style="left: 33%; top: 40%;" data-node="kerela_n6" title="KERALA@N6">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N6</span>
+                        </div>
+                        <div class="map-pin" style="left: 44%; top: 45%;" data-node="kerela_n4" title="KERALA@N4">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N4</span>
+                        </div>
+                        <div class="map-pin" style="left: 48%; top: 34%;" data-node="kerela_n5" title="KERALA@N5">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N5</span>
+                        </div>
+                        <div class="map-pin" style="left: 53%; top: 40%;" data-node="kerela_n8" title="KERALA@N8">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N8</span>
+                        </div>
+                        <div class="map-pin" style="left: 60%; top: 41%;" data-node="kerela_n0" title="KERALA@N0">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N0</span>
+                        </div>
+                        <div class="map-pin" style="left: 69%; top: 44%;" data-node="kerela_n3" title="KERALA@N3">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N3</span>
+                        </div>
+                        <div class="map-pin" style="left: 73%; top: 36%;" data-node="kerela_n1" title="KERALA@N1">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N1</span>
+                        </div>
+                        <div class="map-pin" style="left: 80%; top: 40%;" data-node="kerela_n2" title="KERALA@N2">
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                            <span class="pin-label">N2</span>
+                        </div>
+
+                        <!-- Info bar overlay -->
+                        <div class="terrain-info-bar">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span>Hover or click on any node to view details</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Selection -->
+                <div class="selection-section mt-5">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Monitoring Locations
+                        </h2>
+                        <p class="section-description">Choose the geographic locations to monitor</p>
+                    </div>
+
+                    <div class="location-grid">
+                        {% autoescape off %}
+                        {{ location }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+
+                <!-- Selection Summary -->
+                <div class="selection-summary">
+                    <div class="summary-content">
+                        <i class="fas fa-check-circle summary-icon"></i>
+                        <span class="summary-text">
+                            <strong id="selected-count">0</strong> sensor(s) and <strong id="selected-locations">0</strong> location(s) selected
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-action btn-primary">
+                        <i class="fas fa-check-circle me-2"></i>Submit Selection
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    {% include 'footer-include.html' %}
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Navigation JS -->
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Update selection count
+            function updateSelectionCount() {
+                const sensorCount = $('input[name="st"]:checked').length;
+                const locationCount = $('input[name="loc"]:checked').length;
+
+                $('#selected-count').text(sensorCount);
+                $('#selected-locations').text(locationCount);
+            }
+
+            // Handle "All Sensors" checkbox
+            $('#allsen').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('input[name="st"]').not('#allsen').prop('checked', false);
+                }
+                updateSelectionCount();
+            });
+
+            // Uncheck "All Sensors" when individual sensor is selected
+            $('input[name="st"]').not('#allsen').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('#allsen').prop('checked', false);
+                }
+                updateSelectionCount();
+            });
+
+            // Handle "All Locations" checkbox
+            $('#allloc').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('input[name="loc"]').not('#allloc').prop('checked', false);
+                    $('.map-pin').removeClass('pin-active');
+                }
+                updateSelectionCount();
+            });
+
+            // Uncheck "All Locations" when individual location is selected
+            $('input[name="loc"]').not('#allloc').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('#allloc').prop('checked', false);
+                }
+                updateSelectionCount();
+            });
+
+            // Map pin click interaction to toggle corresponding checkbox
+            $('.map-pin').on('click', function() {
+                const node_id = $(this).data('node');
+                const checkbox = $('#' + node_id);
+                if (checkbox.length) {
+                    checkbox.prop('checked', !checkbox.is(':checked')).trigger('change');
+                }
+            });
+
+            // Sync checkbox change to update map pin visual state
+            $('input[name="loc"]').on('change', function() {
+                const node_id = $(this).attr('id');
+                if (node_id === 'allloc') {
+                    if ($(this).is(':checked')) {
+                        $('.map-pin').removeClass('pin-active');
+                    }
+                } else {
+                    const pin = $('.map-pin[data-node="' + node_id + '"]');
+                    if (pin.length) {
+                        if ($(this).is(':checked')) {
+                            pin.addClass('pin-active');
+                            $('#allloc').prop('checked', false);
+                        } else {
+                            pin.removeClass('pin-active');
+                        }
+                    }
+                }
+            });
+
+            // Set initial map pin states
+            $('input[name="loc"]:checked').each(function() {
+                const node_id = $(this).attr('id');
+                if (node_id !== 'allloc') {
+                    $('.map-pin[data-node="' + node_id + '"]').addClass('pin-active');
+                }
+            });
+
+            // Form validation
+            $('#sensorSelectionForm').on('submit', function(e) {
+                const sensorSelected = $('input[name="st"]:checked').length > 0;
+                const locationSelected = $('input[name="loc"]:checked').length > 0;
+
+                if (!sensorSelected || !locationSelected) {
+                    e.preventDefault();
+
+                    // Show error message
+                    let errorMsg = 'Please select at least:\n';
+                    if (!sensorSelected) errorMsg += '- One sensor type\n';
+                    if (!locationSelected) errorMsg += '- One location\n';
+
+                    alert(errorMsg);
+                    return false;
+                }
+            });
+
+            // Update count when checkboxes change
+            $('input[name="st"], input[name="loc"]').on('change', updateSelectionCount);
+
+            // Initialize count
+            updateSelectionCount();
+
+            // Add animation on list item click
+            $('.list-group-item').on('click', function() {
+                $(this).addClass('card-clicked');
+                setTimeout(() => {
+                    $(this).removeClass('card-clicked');
+                }, 300);
+            });
+        });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

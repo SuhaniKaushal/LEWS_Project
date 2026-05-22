@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>LEWS</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Design System CSS -->
+      <link rel="stylesheet" href="{% static 'css/design-system.css' %}">
+      <link rel="stylesheet" href="{% static 'css/mobile-nav.css' %}">
+      <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+      <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <body class="main-layout inner_page">
+{% block content %}
+    <!-- Navigation -->
+    {% include 'navbar-include.html' %}
+
+    <!-- Main Content -->
+    <main id="main-content">
+     {% csrf_token %}
+
+        <div id='d'>{% autoescape off %}{{admin_message}}{% endautoescape %}
+
+        {% autoescape off %}{{message_sp}}{% endautoescape %}
+        {% autoescape off %}{{message}}{% endautoescape %}
+        <a href='logout.html'>LOGOUT</a>
+
+        {% autoescape off %}
+				{{hyper_data}}
+	    {% endautoescape %}
+
+        </div>
+      <div class="about">
+         <div class="container">
+            <div class="row mx-auto">
+                <div class="col-xl-7 mx-auto">
+                    <div class="card shadow border-0 mb-5 mx-auto">
+                        <div class="card-body p-5">
+
+
+	<form action='fetch_info' method='post'>
+	<input type='hidden' value='browser' name='val'>
+
+    <h2 class="h4 mb-1">Sensor Type</h2>
+    <p class="small text-muted font-italic mb-4">Select sensor type</p>
+    <div id='id1'>
+    {% autoescape off %}
+		 	 	{{sensor}}
+	{% endautoescape %}
+
+    </div>
+    </div>
+    </div>
+
+    <div class="card shadow border-0 mb-5 mx-auto">
+                        <div class="card-body p-5">
+
+    <h2 class="h4 mb-1">Location</h2>
+        <p class="small text-muted font-italic mb-4">Select Location</p>
+    <ul class="list group">
+    {% autoescape off %}
+			 	 	{{location}}
+	{% endautoescape %}
+    </ul></br>
+      </div>
+ </div>
+          <div class="text-center">
+    <input type=submit value="SUBMIT">
+          </div>
+    </form>
+
+  </div>
+   </div>
+    </div>
+     </div>
+ </br><br>
+
+ {% autoescape off %}
+			 	 	{{table_data}}
+	{% endautoescape %}
+    </main>
+
+	<!-- Footer -->
+	{% include 'footer-include.html' %}
+
+	      <!-- Javascript files-->
+	      <script src="{% static 'js/jquery.min.js' %}"></script>
+	      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+
+	      <!-- Navigation JS -->
+	      <script src="{% static 'js/nav.js' %}"></script>
+
+      <script src="{% static 'js/custom.js' %}"></script>
+
+      <!-- Interactions JS -->
+      <script src="{% static 'js/interactions.js' %}"></script>
+
+{% endblock %}
+
+</body>
+</html>

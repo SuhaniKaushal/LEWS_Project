@@ -1,0 +1,537 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>Create Account - LEWS | Landslide Early Warning System</title>
+    <meta name="description" content="Register for the Landslide Early Warning System to access real-time monitoring and alerts.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Auth Styles -->
+    <link rel="stylesheet" href="{% static 'css/auth-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <!-- Left Panel - Branding -->
+        <div class="auth-branding-panel">
+            <div class="auth-branding-pattern"></div>
+
+            <div class="auth-branding-content">
+                <!-- Logo -->
+                <div class="auth-branding-logo">
+                    <i class="fas fa-mountain"></i>
+                </div>
+
+                <!-- Title -->
+                <h1 class="auth-branding-title">LEWS</h1>
+                <p class="auth-branding-subtitle">Landslide Early Warning System</p>
+
+                <!-- Features -->
+                <ul class="auth-features-list">
+                    <li>
+                        <i class="fas fa-user-shield"></i>
+                        <span>Secure account with email verification</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Access to location-specific sensor data</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile app integration available</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-history"></i>
+                        <span>Historical data analysis & downloads</span>
+                    </li>
+                </ul>
+
+                <!-- Partners -->
+                <div class="auth-partners">
+                    <p class="auth-partners-label">Funded By</p>
+                    <div class="auth-partners-logos">
+                        <div class="auth-partner-badge">
+                            <i class="fas fa-leaf"></i>
+                            <span>NMHS</span>
+                        </div>
+                        <div class="auth-partner-badge">
+                            <i class="fas fa-mountain"></i>
+                            <span>Himalayan Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Registration Form -->
+        <div class="auth-form-panel">
+            <!-- Home Link -->
+            <a href="{% url 'landing' %}" class="auth-home-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+
+            <!-- Security Badge -->
+            <div class="auth-security-badge">
+                <i class="fas fa-shield-halved"></i>
+                <span>256-bit Encryption</span>
+            </div>
+
+            <!-- Auth Card -->
+            <div class="auth-card auth-card-glass">
+                <!-- Card Header -->
+                <div class="auth-card-header">
+                    <div class="auth-card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h2 class="auth-card-title">Create Account</h2>
+                    <p class="auth-card-subtitle">Join the LEWS monitoring network</p>
+                </div>
+
+                <!-- Error/Success Alert -->
+                {% if message %}
+                <div class="auth-alert {% if 'success' in message|lower or 'confirm' in message|lower %}auth-alert-success{% else %}auth-alert-danger{% endif %}" role="alert">
+                    <span class="auth-alert-icon">
+                        <i class="fas {% if 'success' in message|lower or 'confirm' in message|lower %}fa-check-circle{% else %}fa-exclamation-circle{% endif %}"></i>
+                    </span>
+                    <span>{{ message }}</span>
+                </div>
+                {% endif %}
+
+                <!-- Registration Form -->
+                <form method="post" action="regis_page" id="registerForm" class="auth-form" novalidate>
+                    {% csrf_token %}
+
+                    <!-- Full Name Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="fullName">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-user"></i>
+                                Full Name
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="t1"
+                                class="auth-form-input"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                            <i class="fas fa-user auth-input-icon"></i>
+                        </div>
+                        <div class="auth-validation-message error" id="nameError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter your full name</span>
+                        </div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="email">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-envelope"></i>
+                                Email Address
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="email"
+                                id="email"
+                                name="t2"
+                                class="auth-form-input"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                        </div>
+                        <div class="auth-validation-message error" id="emailError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter a valid email address</span>
+                        </div>
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="phone">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-phone"></i>
+                                Phone Number
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="t3"
+                                class="auth-form-input"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                                required
+                            >
+                            <i class="fas fa-phone auth-input-icon"></i>
+                        </div>
+                        <div class="auth-validation-message error" id="phoneError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter a valid phone number</span>
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="password">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-lock"></i>
+                                Password
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="t4"
+                                class="auth-form-input has-toggle"
+                                placeholder="Create a strong password"
+                                autocomplete="new-password"
+                                required
+                                minlength="8"
+                            >
+                            <i class="fas fa-key auth-input-icon"></i>
+                            <button
+                                type="button"
+                                class="auth-password-toggle"
+                                id="togglePassword"
+                                aria-label="Toggle password visibility"
+                            >
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <!-- Password Strength Meter -->
+                        <div class="auth-password-strength" id="passwordStrength" style="display: none;">
+                            <div class="auth-password-strength-bar">
+                                <div class="auth-password-strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="auth-password-strength-text" id="strengthText">Password strength</span>
+                        </div>
+                        <div class="auth-validation-message error" id="passwordError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Password must be at least 8 characters</span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="confirmPassword">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-lock"></i>
+                                Confirm Password
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="t5"
+                                class="auth-form-input has-toggle"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+                            <i class="fas fa-check-double auth-input-icon"></i>
+                            <button
+                                type="button"
+                                class="auth-password-toggle"
+                                id="toggleConfirmPassword"
+                                aria-label="Toggle password visibility"
+                            >
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="auth-validation-message error" id="confirmPasswordError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Passwords do not match</span>
+                        </div>
+                    </div>
+
+                    <!-- User Type Selection -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-users"></i>
+                                Account Type
+                            </span>
+                        </label>
+                        <div class="auth-user-type">
+                            <div class="auth-user-type-option">
+                                <input type="radio" id="userTypeResearcher" name="t6" value="RESEARCHER" checked>
+                                <label for="userTypeResearcher">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Researcher</span>
+                                </label>
+                            </div>
+                            <div class="auth-user-type-option">
+                                <input type="radio" id="userTypeOfficial" name="t6" value="OFFICIAL">
+                                <label for="userTypeOfficial">
+                                    <i class="fas fa-building"></i>
+                                    <span>Official</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden field for request type -->
+                    <input type="hidden" value="web" name="web">
+
+                    <!-- Terms and Conditions -->
+                    <div class="auth-form-group">
+                        <label class="auth-checkbox-wrapper">
+                            <input type="checkbox" class="auth-checkbox" id="agreeTerms" required>
+                            <span class="auth-terms">
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                            </span>
+                        </label>
+                        <div class="auth-validation-message error" id="termsError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>You must agree to the terms to continue</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="auth-btn auth-btn-primary auth-btn-block" id="registerBtn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Create Account</span>
+                    </button>
+                </form>
+
+                <!-- Card Footer -->
+                <div class="auth-card-footer">
+                    <p>Already have an account? <a href="{% url 'signin' %}">Sign in here</a></p>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="auth-session-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Account activation requires email verification and admin approval</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Validation Script -->
+    <script>
+    $(document).ready(function() {
+        // Password Toggle for both fields
+        function setupPasswordToggle(toggleId, inputId) {
+            $(toggleId).on('click', function() {
+                const passwordField = $(inputId);
+                const icon = $(this).find('i');
+
+                if (passwordField.attr('type') === 'password') {
+                    passwordField.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+        }
+
+        setupPasswordToggle('#togglePassword', '#password');
+        setupPasswordToggle('#toggleConfirmPassword', '#confirmPassword');
+
+        // Password Strength Checker
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            const strengthFill = $('#strengthFill');
+            const strengthText = $('#strengthText');
+
+            if (password.length >= 8) strength++;
+            if (password.length >= 12) strength++;
+            if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+            if (/\d/.test(password)) strength++;
+            if (/[^a-zA-Z0-9]/.test(password)) strength++;
+
+            strengthFill.removeClass('weak fair good strong');
+
+            if (strength <= 1) {
+                strengthFill.addClass('weak');
+                strengthText.text('Weak password');
+            } else if (strength === 2) {
+                strengthFill.addClass('fair');
+                strengthText.text('Fair password');
+            } else if (strength === 3) {
+                strengthFill.addClass('good');
+                strengthText.text('Good password');
+            } else {
+                strengthFill.addClass('strong');
+                strengthText.text('Strong password');
+            }
+        }
+
+        // Show password strength meter on input
+        $('#password').on('input', function() {
+            const password = $(this).val();
+            if (password.length > 0) {
+                $('#passwordStrength').show();
+                checkPasswordStrength(password);
+            } else {
+                $('#passwordStrength').hide();
+            }
+        });
+
+        // Validation Functions
+        function validateName() {
+            const name = $('#fullName').val().trim();
+            if (name === '' || name.length < 2) {
+                $('#fullName').addClass('is-invalid').removeClass('is-valid');
+                $('#nameError').show();
+                return false;
+            }
+            $('#fullName').addClass('is-valid').removeClass('is-invalid');
+            $('#nameError').hide();
+            return true;
+        }
+
+        function validateEmail() {
+            const email = $('#email').val().trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                $('#email').addClass('is-invalid').removeClass('is-valid');
+                $('#emailError').show();
+                return false;
+            }
+            $('#email').addClass('is-valid').removeClass('is-invalid');
+            $('#emailError').hide();
+            return true;
+        }
+
+        function validatePhone() {
+            const phone = $('#phone').val().trim();
+            const phoneRegex = /^[\d\s\-+()]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                $('#phone').addClass('is-invalid').removeClass('is-valid');
+                $('#phoneError').show();
+                return false;
+            }
+            $('#phone').addClass('is-valid').removeClass('is-invalid');
+            $('#phoneError').hide();
+            return true;
+        }
+
+        function validatePassword() {
+            const password = $('#password').val();
+            if (password.length < 8) {
+                $('#password').addClass('is-invalid').removeClass('is-valid');
+                $('#passwordError').show();
+                return false;
+            }
+            $('#password').addClass('is-valid').removeClass('is-invalid');
+            $('#passwordError').hide();
+            return true;
+        }
+
+        function validateConfirmPassword() {
+            const password = $('#password').val();
+            const confirmPassword = $('#confirmPassword').val();
+            if (confirmPassword !== password || confirmPassword === '') {
+                $('#confirmPassword').addClass('is-invalid').removeClass('is-valid');
+                $('#confirmPasswordError').show();
+                return false;
+            }
+            $('#confirmPassword').addClass('is-valid').removeClass('is-invalid');
+            $('#confirmPasswordError').hide();
+            return true;
+        }
+
+        function validateTerms() {
+            if (!$('#agreeTerms').is(':checked')) {
+                $('#termsError').show();
+                return false;
+            }
+            $('#termsError').hide();
+            return true;
+        }
+
+        // Real-time validation
+        $('#fullName').on('blur input', validateName);
+        $('#email').on('blur input', validateEmail);
+        $('#phone').on('blur input', validatePhone);
+        $('#password').on('blur', validatePassword);
+        $('#confirmPassword').on('blur input', validateConfirmPassword);
+        $('#agreeTerms').on('change', validateTerms);
+
+        // Form submission validation
+        $('#registerForm').on('submit', function(e) {
+            const validations = [
+                validateName(),
+                validateEmail(),
+                validatePhone(),
+                validatePassword(),
+                validateConfirmPassword(),
+                validateTerms()
+            ];
+
+            const isValid = validations.every(v => v === true);
+
+            if (!isValid) {
+                e.preventDefault();
+
+                // Focus on first invalid field
+                const invalidField = $('.auth-form-input.is-invalid').first();
+                if (invalidField.length) {
+                    invalidField.focus();
+                }
+
+                return false;
+            }
+
+            // Show loading state
+            const btn = $('#registerBtn');
+            btn.addClass('auth-btn-loading').prop('disabled', true);
+        });
+
+        // Remove validation styling on focus
+        $('.auth-form-input').on('focus', function() {
+            $(this).removeClass('is-invalid');
+            $(this).closest('.auth-form-group').find('.auth-validation-message').hide();
+        });
+
+        // Auto-focus on first field
+        $('#fullName').focus();
+    });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>

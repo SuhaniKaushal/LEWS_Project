@@ -1,0 +1,360 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>Sign In - LEWS | Landslide Early Warning System</title>
+    <meta name="description" content="Sign in to access the Landslide Early Warning System dashboard for real-time monitoring and alerts.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Auth Styles -->
+    <link rel="stylesheet" href="{% static 'css/auth-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+</head>
+
+<body class="auth-page">
+    <div class="auth-container">
+        <!-- Left Panel - Branding -->
+        <div class="auth-branding-panel">
+            <div class="auth-branding-pattern"></div>
+
+            <div class="auth-branding-content">
+                <!-- Logo -->
+                <div class="auth-branding-logo">
+                    <i class="fas fa-mountain"></i>
+                </div>
+
+                <!-- Title -->
+                <h1 class="auth-branding-title">LEWS</h1>
+                <p class="auth-branding-subtitle">Landslide Early Warning System</p>
+
+                <!-- Features -->
+                <ul class="auth-features-list">
+                    <li>
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Real-time sensor monitoring across NMHS sites</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-bell"></i>
+                        <span>Instant alerts for potential hazard conditions</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <span>Advanced data visualization & analytics</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-shield-halved"></i>
+                        <span>Secure, encrypted data transmission</span>
+                    </li>
+                </ul>
+
+                <!-- Partners -->
+                <div class="auth-partners">
+                    <p class="auth-partners-label">A Joint Initiative By</p>
+                    <div class="auth-partners-logos">
+                        <div class="auth-partner-badge">
+                            <i class="fas fa-building-columns"></i>
+                            <span>CSIR-CBRI</span>
+                        </div>
+                        <div class="auth-partner-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IIT Roorkee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Login Form -->
+        <div class="auth-form-panel">
+            <!-- Home Link -->
+            <a href="{% url 'landing' %}" class="auth-home-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+
+            <!-- Security Badge -->
+            <div class="auth-security-badge">
+                <i class="fas fa-lock"></i>
+                <span>Secure Connection (HTTPS)</span>
+            </div>
+
+            <!-- Auth Card -->
+            <div class="auth-card auth-card-glass">
+                <!-- Card Header -->
+                <div class="auth-card-header">
+                    <div class="auth-card-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2 class="auth-card-title">Welcome Back</h2>
+                    <p class="auth-card-subtitle">Sign in to access your dashboard</p>
+                </div>
+
+                <!-- Error Alert (shown conditionally) -->
+                {% if message %}
+                <div class="auth-alert auth-alert-danger" role="alert">
+                    <span class="auth-alert-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <span>{{ message }}</span>
+                </div>
+                {% endif %}
+
+                <!-- Login Form -->
+                <form method="post" action="login_page" id="loginForm" class="auth-form" novalidate>
+                    {% csrf_token %}
+
+                    <!-- Username/Email Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="username">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-user"></i>
+                                Username or Email
+                            </span>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="text"
+                                id="username"
+                                name="t11"
+                                class="auth-form-input"
+                                placeholder="Enter your username or email"
+                                autocomplete="username"
+                                required
+                                aria-describedby="usernameHelp"
+                            >
+                            <i class="fas fa-envelope auth-input-icon"></i>
+                        </div>
+                        <div class="auth-validation-message error" id="usernameError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter your username or email</span>
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="auth-form-group">
+                        <label class="auth-form-label" for="password">
+                            <span class="auth-form-label-icon">
+                                <i class="fas fa-lock"></i>
+                                Password
+                            </span>
+                            <a href="#" class="auth-label-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                                Forgot password?
+                            </a>
+                        </label>
+                        <div class="auth-input-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="t12"
+                                class="auth-form-input has-toggle"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                                aria-describedby="passwordHelp"
+                            >
+                            <i class="fas fa-key auth-input-icon"></i>
+                            <button
+                                type="button"
+                                class="auth-password-toggle"
+                                id="togglePassword"
+                                aria-label="Toggle password visibility"
+                            >
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="auth-validation-message error" id="passwordError" style="display: none;">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter your password</span>
+                        </div>
+                    </div>
+
+                    <!-- Hidden field for request type -->
+                    <input type="hidden" value="web" name="web">
+
+                    <!-- Remember Me & Forgot Password -->
+                    <div class="auth-checkbox-group">
+                        <label class="auth-checkbox-wrapper">
+                            <input type="checkbox" class="auth-checkbox" id="rememberMe" name="remember">
+                            <span class="auth-checkbox-label">Remember me</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="auth-btn auth-btn-primary auth-btn-block" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Sign In</span>
+                    </button>
+                </form>
+
+                <!-- Card Footer -->
+                <div class="auth-card-footer">
+                    <p>Don't have an account? <a href="{% url 'register_form' %}">Register here</a></p>
+                </div>
+
+                <!-- Session Info -->
+                <div class="auth-session-info">
+                    <i class="fas fa-clock"></i>
+                    <span>Sessions automatically expire after 30 minutes of inactivity</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 16px; border: none;">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel" style="font-family: 'Poppins', sans-serif; font-weight: 600;">
+                        <i class="fas fa-key text-warning me-2"></i>
+                        Reset Password
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-3">Enter your registered email address and we'll send you a link to reset your password.</p>
+                    <div class="mb-3">
+                        <label for="resetEmail" class="form-label fw-semibold">Email Address</label>
+                        <input type="email" class="form-control" id="resetEmail" placeholder="Enter your email" style="height: 48px; border-radius: 8px;">
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 8px;">Cancel</button>
+                    <button type="button" class="btn text-white" style="background: linear-gradient(135deg, #ff6b35, #e55a2b); border-radius: 8px;">
+                        <i class="fas fa-paper-plane me-1"></i>
+                        Send Reset Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Validation Script -->
+    <script>
+    $(document).ready(function() {
+        // Password Toggle
+        $('#togglePassword').on('click', function() {
+            const passwordField = $('#password');
+            const icon = $(this).find('i');
+
+            if (passwordField.attr('type') === 'password') {
+                passwordField.attr('type', 'text');
+                icon.removeClass('fa-eye').addClass('fa-eye-slash');
+            } else {
+                passwordField.attr('type', 'password');
+                icon.removeClass('fa-eye-slash').addClass('fa-eye');
+            }
+        });
+
+        // Real-time validation
+        $('#username').on('blur input', function() {
+            validateUsername();
+        });
+
+        $('#password').on('blur input', function() {
+            validatePassword();
+        });
+
+        // Form validation function
+        function validateUsername() {
+            const username = $('#username').val().trim();
+            const errorEl = $('#usernameError');
+
+            if (username === '') {
+                $('#username').addClass('is-invalid').removeClass('is-valid');
+                errorEl.show();
+                return false;
+            } else {
+                $('#username').addClass('is-valid').removeClass('is-invalid');
+                errorEl.hide();
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = $('#password').val();
+            const errorEl = $('#passwordError');
+
+            if (password === '') {
+                $('#password').addClass('is-invalid').removeClass('is-valid');
+                errorEl.show();
+                return false;
+            } else {
+                $('#password').addClass('is-valid').removeClass('is-invalid');
+                errorEl.hide();
+                return true;
+            }
+        }
+
+        // Form submission validation
+        $('#loginForm').on('submit', function(e) {
+            const isUsernameValid = validateUsername();
+            const isPasswordValid = validatePassword();
+
+            if (!isUsernameValid || !isPasswordValid) {
+                e.preventDefault();
+
+                // Focus on first invalid field
+                if (!isUsernameValid) {
+                    $('#username').focus();
+                } else if (!isPasswordValid) {
+                    $('#password').focus();
+                }
+
+                return false;
+            }
+
+            // Show loading state
+            const btn = $('#loginBtn');
+            btn.addClass('auth-btn-loading').prop('disabled', true);
+        });
+
+        // Remove validation on focus
+        $('.auth-form-input').on('focus', function() {
+            $(this).removeClass('is-invalid');
+            $(this).closest('.auth-form-group').find('.auth-validation-message').hide();
+        });
+
+        // Keyboard accessibility for password toggle
+        $('#togglePassword').on('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+
+        // Auto-focus on username field
+        $('#username').focus();
+    });
+    </script>
+
+    <!-- Interactions JS -->
+    <script src="{% static 'js/interactions.js' %}"></script>
+</body>
+</html>
